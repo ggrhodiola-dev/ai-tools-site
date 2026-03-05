@@ -29,8 +29,12 @@ function copyDir(src, dest) {
 }
 
 function copyPublic() {
-    // public 配下を site_out 配下へコピー（/css/style.css が site_out/css/style.css になる）
-    copyDir(path.join(root, "public"), outDir);
+    const src = path.join(root, "public");
+    const dest = outDir;
+    if (!fs.existsSync(src)) return;
+
+    // Node v16+ なら fs.cpSync が使えます
+    fs.cpSync(src, dest, { recursive: true });
 }
 
 function slugify(name) {
