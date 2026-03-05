@@ -12,6 +12,27 @@ function ensureDir(dir) {
     }
 }
 
+function copyDir(src, dest) {
+    if (!fs.existsSync(src)) return;
+    ensureDir(dest);
+
+    for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+
+        if (entry.isDirectory()) {
+            copyDir(srcPath, destPath);
+        } else {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    }
+}
+
+function copyPublic() {
+    // public 配下を site_out 配下へコピー（/css/style.css が site_out/css/style.css になる）
+    copyDir(path.join(root, "public"), outDir);
+}
+
 function slugify(name) {
     return name
         .toLowerCase()
@@ -438,6 +459,8 @@ ${urls}
 function build() {
 
     ensureDir(outDir);
+
+    copyPublic();
 
     buildTools();
     buildTags();
