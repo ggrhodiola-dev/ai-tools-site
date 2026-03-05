@@ -19,6 +19,70 @@ function slugify(name) {
         .replace(/^-|-$/g, "");
 }
 
+function renderList(title, arr) {
+
+    if (!arr || arr.length === 0) return "";
+
+    let html = `<h3>${title}</h3><ul>`;
+
+    arr.forEach(v => {
+        html += `<li>${v}</li>`;
+    });
+
+    html += `</ul>`;
+
+    return html;
+}
+
+function layout(title, body) {
+
+    return `
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>${title}</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+<a href="/">AIツール比較サイト</a>
+</h1>
+
+<nav>
+
+<a href="/ai-tools/">AIツール一覧</a>
+
+</nav>
+
+</header>
+
+<main>
+
+${body}
+
+</main>
+
+<footer>
+
+<p>AI Tools Directory</p>
+
+</footer>
+
+</body>
+
+</html>
+`;
+
+}
+
 /* =========================
    TOOLS
 ========================= */
@@ -34,7 +98,7 @@ function buildTools() {
         ensureDir(dir);
 
         const tags = (tool.tags || [])
-            .map(t => `<a href="/tags/${t}/">${t}</a>`)
+            .map(t => `<a class="tag" href="/tags/${t}/">${t}</a>`)
             .join(" ");
 
         const related = tools
@@ -43,37 +107,53 @@ function buildTools() {
             .map(t => `<li><a href="/tools/${t.slug}/">${t.name}</a></li>`)
             .join("");
 
-        const html = `
-<html>
-<head>
-<title>${tool.name}</title>
-<meta charset="utf-8">
-</head>
-
-<body>
+        const body = `
 
 <h1>${tool.name}</h1>
 
-<p>${tool.description || ""}</p>
+<p class="desc">
+${tool.description || ""}
+</p>
 
 <p>
-<a href="${tool.url || "#"}" target="_blank">
-公式サイト
+<a class="btn" href="${tool.url || "#"}" target="_blank">
+公式サイトを見る
 </a>
 </p>
 
-<div>
+${renderList("主な機能", tool.features)}
+
+${renderList("用途", tool.use_cases)}
+
+${renderList("メリット", tool.pros)}
+
+${renderList("デメリット", tool.cons)}
+
+${tool.pricing ? `<h3>料金</h3><p>${tool.pricing}</p>` : ""}
+
+${tool.platforms ?
+                `<h3>対応プラットフォーム</h3>
+<ul>
+${tool.platforms.map(p => `<li>${p}</li>`).join("")}
+</ul>` : ""}
+
+${tool.api !== undefined ?
+                `<h3>API</h3>
+<p>${tool.api ? "あり" : "なし"}</p>` : ""}
+
+<div class="tags">
 ${tags}
 </div>
 
 <h3>関連AIツール</h3>
+
 <ul>
 ${related}
 </ul>
 
-</body>
-</html>
 `;
+
+        const html = layout(tool.name, body);
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
@@ -118,24 +198,19 @@ function buildTags() {
 
         });
 
-        const html = `
-<html>
-<head>
-<title>${tag} AIツール</title>
-<meta charset="utf-8">
-</head>
-
-<body>
+        const body = `
 
 <h1>${tag} AIツール</h1>
 
 <ul>
+
 ${items}
+
 </ul>
 
-</body>
-</html>
 `;
+
+        const html = layout(`${tag} AIツール`, body);
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
@@ -173,32 +248,40 @@ function buildCategories() {
         catMap[cat].forEach(t => {
 
             items += `
+
 <li>
-<a href="/tools/${t.slug}/">${t.name}</a>
-<p>${t.description || ""}</p>
+
+<a href="/tools/${t.slug}/">
+
+${t.name}
+
+</a>
+
+<p>
+
+${t.description || ""}
+
+</p>
+
 </li>
+
 `;
 
         });
 
-        const html = `
-<html>
-<head>
-<title>${cat} AIツール</title>
-<meta charset="utf-8">
-</head>
-
-<body>
+        const body = `
 
 <h1>${cat} AIツール</h1>
 
 <ul>
+
 ${items}
+
 </ul>
 
-</body>
-</html>
 `;
+
+        const html = layout(`${cat} AIツール`, body);
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
@@ -210,7 +293,7 @@ ${items}
 }
 
 /* =========================
-   AI TOOLS LIST
+   LIST
 ========================= */
 
 function buildList() {
@@ -227,24 +310,19 @@ function buildList() {
 
     });
 
-    const html = `
-<html>
-<head>
-<title>AIツール一覧</title>
-<meta charset="utf-8">
-</head>
-
-<body>
+    const body = `
 
 <h1>AIツール一覧</h1>
 
-<ul>
+<ul class="tool-list">
+
 ${items}
+
 </ul>
 
-</body>
-</html>
 `;
+
+    const html = layout("AIツール一覧", body);
 
     fs.writeFileSync(
         path.join(dir, "index.html"),
@@ -259,30 +337,41 @@ ${items}
 
 function buildHome() {
 
-    const html = `
-<html>
-<head>
-<title>AIツールデータベース</title>
-<meta charset="utf-8">
-</head>
+    const body = `
 
-<body>
-
-<h1>AIツールデータベース</h1>
+<h2>AIツール検索サイト</h2>
 
 <p>
-AIツールをカテゴリ別に整理したデータベースです。
+
+最新AIツールをカテゴリ別にまとめています。
+
 </p>
 
-<ul>
-<li><a href="/ai-tools/">AIツール一覧</a></li>
-<li><a href="/categories/">カテゴリ</a></li>
-<li><a href="/tags/">タグ</a></li>
-</ul>
+<div class="home-links">
 
-</body>
-</html>
+<a class="card" href="/ai-tools/">
+
+AIツール一覧
+
+</a>
+
+<a class="card" href="/categories/">
+
+カテゴリ
+
+</a>
+
+<a class="card" href="/tags/">
+
+タグ
+
+</a>
+
+</div>
+
 `;
+
+    const html = layout("AIツール比較サイト", body);
 
     fs.writeFileSync(
         path.join(outDir, "index.html"),
@@ -302,17 +391,25 @@ function buildSitemap() {
     tools.forEach(t => {
 
         urls += `
+
 <url>
+
 <loc>/tools/${t.slug}/</loc>
+
 </url>
+
 `;
 
     });
 
     const xml = `
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 ${urls}
+
 </urlset>
+
 `;
 
     fs.writeFileSync(
