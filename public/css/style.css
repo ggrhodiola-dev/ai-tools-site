@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+ul {
+    line-height: 1.8;
+}

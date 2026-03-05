@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "text",
+    "name": "文章生成AI"
+  },
+  {
+    "slug": "image",
+    "name": "画像生成AI"
+  },
+  {
+    "slug": "video",
+    "name": "動画生成AI"
+  },
+  {
+    "slug": "audio",
+    "name": "音声生成AI"
+  },
+  {
+    "slug": "dev",
+    "name": "開発AI"
+  }
+]

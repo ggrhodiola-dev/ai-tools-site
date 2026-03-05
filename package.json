@@ -1,0 +1,10 @@
+{
+  "name": "ai-tools-site",
+  "version": "1.0.0",
+  "description": "AI tools database site generator",
+  "main": "build/build.js",
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "dependencies": {}
+}

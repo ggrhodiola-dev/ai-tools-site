@@ -1,0 +1,7 @@
+[
+  { "slug": "popular", "name": "人気AI" },
+  { "slug": "free", "name": "無料AI" },
+  { "slug": "api", "name": "API対応AI" },
+  { "slug": "image", "name": "画像生成AI" },
+  { "slug": "chat", "name": "AIチャット" }
+]
