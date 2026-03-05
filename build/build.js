@@ -39,9 +39,13 @@ function layout(title, body) {
     return `
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>${title}</title>
 
 <link rel="stylesheet" href="/css/style.css">
@@ -52,27 +56,25 @@ function layout(title, body) {
 
 <header>
 
+<div class="container">
+
 <h1>
 <a href="/">AIツール比較サイト</a>
 </h1>
 
 <nav>
-
 <a href="/ai-tools/">AIツール一覧</a>
-
 </nav>
+
+</div>
 
 </header>
 
-<main>
-
 ${body}
-
-</main>
 
 <footer>
 
-<p>AI Tools Directory</p>
+AI Tools Directory
 
 </footer>
 
@@ -80,7 +82,6 @@ ${body}
 
 </html>
 `;
-
 }
 
 /* =========================
@@ -337,37 +338,48 @@ ${items}
 
 function buildHome() {
 
+    const featured = tools.slice(0, 8).map(t => `
+<div class="card">
+<a href="/tools/${t.slug}/">${t.name}</a>
+<p>${t.description || ""}</p>
+</div>
+`).join("");
+
     const body = `
 
-<h2>AIツール検索サイト</h2>
+<section class="hero">
 
-<p>
+<h2>AIツール検索・比較サイト</h2>
 
-最新AIツールをカテゴリ別にまとめています。
+<p>最新AIツールをカテゴリ別にまとめています</p>
 
-</p>
+<div class="search">
 
-<div class="home-links">
-
-<a class="card" href="/ai-tools/">
-
-AIツール一覧
-
-</a>
-
-<a class="card" href="/categories/">
-
-カテゴリ
-
-</a>
-
-<a class="card" href="/tags/">
-
-タグ
-
-</a>
+<input placeholder="AIツール検索">
 
 </div>
+
+</section>
+
+<section class="section container">
+
+<h2>人気AIツール</h2>
+
+<div class="grid">
+
+${featured}
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<h2>AIツール一覧</h2>
+
+<a href="/ai-tools/">すべてのAIツールを見る →</a>
+
+</section>
 
 `;
 

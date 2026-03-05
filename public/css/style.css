@@ -1,377 +1,108 @@
-const fs=require("fs");
-const path=require("path");
-
-const tools=require("../data/tools.json");
-
-const root=path.join(__dirname, "..");
-const outDir=path.join(root, "site_out");
-
-function ensureDir(dir) {
-    if( !fs.existsSync(dir)) {
-        fs.mkdirSync(dir, {
-            recursive:true
-        });
-}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+    color: #222;
 }
 
-function slugify(name) {
-    return name .toLowerCase() .replace(/[^a-z0-9]+/g, "-") .replace(/^-|-$/g, "");
+header {
+    background: white;
+    border-bottom: 1px solid #eee;
 }
 
-function renderList(title, arr) {
-
-    if( !arr || arr.length===0) return "";
-
-    let html=`<h3>$ {
-        title
-    }
-
-    </h3><ul>`;
-
-    arr.forEach(v=> {
-            html+=`<li>$ {
-                v
-            }
-
-            </li>`;
-        });
-
-    html+=`</ul>`;
-
-    return html;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-function layout(title, body) {
-
-    return ` < !DOCTYPE html><html><head><meta charset="utf-8"><title>$ {
-        title
-    }
-
-    </title><link rel="stylesheet" href="/css/style.css"></head><body><header><h1><a href="/">AIツール比較サイト</a></h1><nav><a href="/ai-tools/">AIツール一覧</a></nav></header><main>$ {
-        body
-    }
-
-    </main><footer><p>AI Tools Directory</p></footer></body></html>`;
-
+h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
-/* =========================
-   TOOLS
-========================= */
-
-function buildTools() {
-
-    tools.forEach(tool=> {
-
-            const slug=tool.slug || slugify(tool.name);
-
-            const dir=path.join(outDir, "tools", slug);
-
-            ensureDir(dir);
-
-            const tags=(tool.tags || []) .map(t=>`<a class="tag" href="/tags/${t}/" >$ {
-                    t
-                }
-
-                </a>`) .join(" ");
-
-            const related=tools .filter(t=>t.category===tool.category && t.slug !==tool.slug) .slice(0, 5) .map(t=>`<li><a href="/tools/${t.slug}/" >$ {
-                    t.name
-                }
-
-                </a></li>`) .join("");
-
-            const body=` <h1>$ {
-                tool.name
-            }
-
-            </h1> <p class="desc" > $ {
-                tool.description || ""
-            }
-
-            </p> <p> <a class="btn" href="${tool.url || " #"}" target="_blank" > 公式サイトを見る </a> </p> $ {
-                renderList("主な機能", tool.features)
-            }
-
-            $ {
-                renderList("用途", tool.use_cases)
-            }
-
-            $ {
-                renderList("メリット", tool.pros)
-            }
-
-            $ {
-                renderList("デメリット", tool.cons)
-            }
-
-            $ {
-                tool.pricing ? `<h3>料金</h3><p>$ {
-                    tool.pricing
-                }
-
-                </p>`:""
-            }
-
-            $ {
-                tool.platforms ? `<h3>対応プラットフォーム</h3> <ul> $ {
-                    tool.platforms.map(p=>`<li>$ {
-                            p
-                        }
-
-                        </li>`).join("")
-                }
-
-                </ul>` : ""
-            }
-
-            $ {
-                tool.api !==undefined ? `<h3>API</h3> <p>$ {
-                    tool.api ? "あり":"なし"
-                }
-
-                </p>` : ""
-            }
-
-            <div class="tags" > $ {
-                tags
-            }
-
-            </div> <h3>関連AIツール</h3> <ul> $ {
-                related
-            }
-
-            </ul> `;
-
-            const html=layout(tool.name, body);
-
-            fs.writeFileSync(path.join(dir, "index.html"),
-                html);
-
-        });
-
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
 }
 
-/* =========================
-   TAGS
-========================= */
-
-function buildTags() {
-
-    const tagMap= {}
-
-    ;
-
-    tools.forEach(t=> {
-
-            (t.tags || []).forEach(tag=> {
-
-                    if( !tagMap[tag]) tagMap[tag]=[];
-
-                    tagMap[tag].push(t);
-
-                });
-
-        });
-
-    Object.keys(tagMap).forEach(tag=> {
-
-            const dir=path.join(outDir, "tags", tag);
-
-            ensureDir(dir);
-
-            let items="";
-
-            tagMap[tag].forEach(t=> {
-
-                    items+=`<li><a href="/tools/${t.slug}/" >$ {
-                        t.name
-                    }
-
-                    </a></li>`;
-
-                });
-
-            const body=` <h1>$ {
-                tag
-            }
-
-            AIツール</h1> <ul> $ {
-                items
-            }
-
-            </ul> `;
-
-            const html=layout(`$ {
-                    tag
-                }
-
-                AIツール`, body);
-
-            fs.writeFileSync(path.join(dir, "index.html"),
-                html);
-
-        });
-
+.hero {
+    background: linear-gradient(135deg, #6c63ff, #4f9cff);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* =========================
-   CATEGORIES
-========================= */
-
-function buildCategories() {
-
-    const catMap= {}
-
-    ;
-
-    tools.forEach(t=> {
-
-            if( !catMap[t.category]) catMap[t.category]=[];
-
-            catMap[t.category].push(t);
-
-        });
-
-    Object.keys(catMap).forEach(cat=> {
-
-            const dir=path.join(outDir, "categories", cat);
-
-            ensureDir(dir);
-
-            let items="";
-
-            catMap[cat].forEach(t=> {
-
-                    items+=` <li> <a href="/tools/${t.slug}/" > $ {
-                        t.name
-                    }
-
-                    </a> <p> $ {
-                        t.description || ""
-                    }
-
-                    </p> </li> `;
-
-                });
-
-            const body=` <h1>$ {
-                cat
-            }
-
-            AIツール</h1> <ul> $ {
-                items
-            }
-
-            </ul> `;
-
-            const html=layout(`$ {
-                    cat
-                }
-
-                AIツール`, body);
-
-            fs.writeFileSync(path.join(dir, "index.html"),
-                html);
-
-        });
-
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-/* =========================
-   LIST
-========================= */
-
-function buildList() {
-
-    const dir=path.join(outDir, "ai-tools");
-
-    ensureDir(dir);
-
-    let items="";
-
-    tools.forEach(t=> {
-
-            items+=`<li><a href="/tools/${t.slug}/" >$ {
-                t.name
-            }
-
-            </a></li>`;
-
-        });
-
-    const body=` <h1>AIツール一覧</h1><ul class="tool-list">$ {
-        items
-    }
-
-    </ul>`;
-
-    const html=layout("AIツール一覧", body);
-
-    fs.writeFileSync(path.join(dir, "index.html"),
-        html);
-
+.search {
+    margin-top: 20px;
 }
 
-/* =========================
-   HOME
-========================= */
-
-function buildHome() {
-
-    const body=` <h2>AIツール検索サイト</h2><p>最新AIツールをカテゴリ別にまとめています。 </p><div class="home-links"><a class="card" href="/ai-tools/">AIツール一覧 </a><a class="card" href="/categories/">カテゴリ </a><a class="card" href="/tags/">タグ </a></div>`;
-
-    const html=layout("AIツール比較サイト", body);
-
-    fs.writeFileSync(path.join(outDir, "index.html"),
-        html);
-
+.search input {
+    width: 320px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
 }
 
-/* =========================
-   SITEMAP
-========================= */
-
-function buildSitemap() {
-
-    let urls="";
-
-    tools.forEach(t=> {
-
-            urls+=` <url> <loc>/tools/$ {
-                t.slug
-            }
-
-            /</loc> </url> `;
-
-        });
-
-    const xml=` <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">$ {
-        urls
-    }
-
-    </urlset>`;
-
-    fs.writeFileSync(path.join(outDir, "sitemap.xml"),
-        xml);
-
+.section {
+    padding: 40px 20px;
 }
 
-/* =========================
-   BUILD
-========================= */
-
-function build() {
-
-    ensureDir(outDir);
-
-    buildTools();
-    buildTags();
-    buildCategories();
-    buildList();
-    buildHome();
-    buildSitemap();
-
+.section h2 {
+    margin-bottom: 20px;
 }
 
-build();
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: .15s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eee;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: #888;
+}
