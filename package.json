@@ -4,7 +4,11 @@
   "description": "AI tools database site generator",
   "main": "build/build.js",
   "scripts": {
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "wrangler": "^4.70.0"
+  }
 }
