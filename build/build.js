@@ -568,7 +568,7 @@ AIツールとは、人工知能を利用して文章作成、画像生成、動
 
 <section class="section container">
 
-<h2>人気AIツール</h2>
+<h2>Pick Up AIツール</h2>
 
 <div class="grid">
 
