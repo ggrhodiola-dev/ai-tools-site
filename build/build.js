@@ -370,18 +370,21 @@ function buildHome() {
 </div>
 `).join("");
 
+    const latest = tools.slice(-8).map(t => `
+<div class="card">
+<a href="/tools/${t.slug}/">${t.name}</a>
+</div>
+`).join("");
+
     const body = `
 
 <section class="hero">
 
 <h2>AIツール検索・比較サイト</h2>
-
-<p>最新AIツールをカテゴリ別にまとめています</p>
+<p>300以上のAIツールをカテゴリ別に整理</p>
 
 <div class="search">
-
-<input placeholder="AIツール検索">
-
+<input id="searchBox" placeholder="AIツールを検索">
 </div>
 
 </section>
@@ -391,9 +394,17 @@ function buildHome() {
 <h2>人気AIツール</h2>
 
 <div class="grid">
-
 ${featured}
+</div>
 
+</section>
+
+<section class="section container">
+
+<h2>最新AIツール</h2>
+
+<div class="grid">
+${latest}
 </div>
 
 </section>
@@ -402,9 +413,31 @@ ${featured}
 
 <h2>AIツール一覧</h2>
 
+<p>
 <a href="/ai-tools/">すべてのAIツールを見る →</a>
+</p>
 
 </section>
+
+<script>
+
+const input=document.getElementById("searchBox");
+
+input.addEventListener("input",()=>{
+
+const q=input.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(c=>{
+
+const t=c.innerText.toLowerCase();
+
+c.style.display=t.includes(q)?"block":"none";
+
+});
+
+});
+
+</script>
 
 `;
 
