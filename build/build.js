@@ -444,7 +444,7 @@ ${esc(t.name)}
 </h3>
 </div>
 
-<p>${esc(safeDesc(t))}</p>
+<p>${esc(safeDesc(t)).slice(0, 80)}</p>
 
 ${renderTags(t)}
 
