@@ -207,3 +207,18 @@ footer {
     font-size: 13px;
     color: #888;
 }
+
+.tags {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 11px;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 3px 7px;
+    border-radius: 6px;
+}
