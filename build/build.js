@@ -135,6 +135,21 @@ ${esc(r.name)}
 
 `).join("")
 
+
+        /* ===================================
+           タグリンク生成
+        =================================== */
+
+        const tagLinks = (t.tags || [])
+            .map(tag => `<a href="/tag/${slug(tag)}/">${esc(tag)}</a>`)
+            .join(" , ")
+
+
+
+        /* ===================================
+           ツールページ本文
+        =================================== */
+
         const body = `
 
 ${breadcrumb(t.category, t.name)}
@@ -152,7 +167,18 @@ ${esc(t.category)}
 
 </p>
 
-<p>${esc(safeDesc(t))}</p>
+<p class="tool-tags">
+
+Tags:
+${tagLinks}
+
+</p>
+
+<p>
+
+${esc(safeDesc(t))}
+
+</p>
 
 <p>
 
@@ -393,6 +419,74 @@ ${items}
 
 }
 
+function buildTags() {
+
+    const map = {}
+
+    tools.forEach(t => {
+
+        if (!t.tags) return
+
+        t.tags.forEach(tag => {
+
+            if (!map[tag]) map[tag] = []
+
+            map[tag].push(t)
+
+        })
+
+    })
+
+    Object.entries(map).forEach(([tag, list]) => {
+
+        const dir = path.join(outDir, "tag", slug(tag))
+
+        ensureDir(dir)
+
+        const items = list.map(t => `
+
+<div class="card">
+
+<a href="/tools/${t.slug}/">
+${t.name}
+</a>
+
+<p>${t.description || ""}</p>
+
+</div>
+
+`).join("")
+
+        const body = `
+
+<section class="section container">
+
+<h1>${tag} AIツール</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+`
+
+        const html = layout(
+            `${tag} AIツール一覧`,
+            body,
+            `${tag}AIツールまとめ`
+        )
+
+        fs.writeFileSync(
+            path.join(dir, "index.html"),
+            html
+        )
+
+    })
+
+}
+
 function buildSearch() {
 
     const dir = path.join(outDir, "search")
@@ -618,7 +712,7 @@ function build() {
     buildList()
     buildCategoryIndex()
     buildCategories()
-
+    buildTags()
     buildRanking()
 
     buildSearch()
