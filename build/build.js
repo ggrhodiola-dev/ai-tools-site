@@ -1,62 +1,30 @@
 const fs = require("fs");
 const path = require("path");
 
-const tools = require("../data/tools.json");
-
-const root = path.join(__dirname, "..");
+const root = path.resolve(__dirname, "..");
+const dataFile = path.join(root, "data", "tools.json");
 const outDir = path.join(root, "site_out");
 
+const tools = JSON.parse(fs.readFileSync(dataFile));
+
 function ensureDir(dir) {
-    if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-    }
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-function copyDir(src, dest) {
-    if (!fs.existsSync(src)) return;
-    ensureDir(dest);
-
-    for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
-        const srcPath = path.join(src, entry.name);
-        const destPath = path.join(dest, entry.name);
-
-        if (entry.isDirectory()) {
-            copyDir(srcPath, destPath);
-        } else {
-            fs.copyFileSync(srcPath, destPath);
-        }
-    }
+function slug(s) {
+    return s
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]/g, "");
 }
 
 function copyPublic() {
+
     const src = path.join(root, "public");
-    const dest = outDir;
     if (!fs.existsSync(src)) return;
 
-    // Node v16+ なら fs.cpSync が使えます
-    fs.cpSync(src, dest, { recursive: true });
-}
+    fs.cpSync(src, outDir, { recursive: true });
 
-function slugify(name) {
-    return name
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "");
-}
-
-function renderList(title, arr) {
-
-    if (!arr || arr.length === 0) return "";
-
-    let html = `<h3>${title}</h3><ul>`;
-
-    arr.forEach(v => {
-        html += `<li>${v}</li>`;
-    });
-
-    html += `</ul>`;
-
-    return html;
 }
 
 function layout(title, body) {
@@ -88,7 +56,10 @@ function layout(title, body) {
 </h1>
 
 <nav>
+
 <a href="/ai-tools/">AIツール一覧</a>
+<a href="/category/">カテゴリ</a>
+
 </nav>
 
 </div>
@@ -109,77 +80,35 @@ AI Tools Directory
 `;
 }
 
-/* =========================
-   TOOLS
-========================= */
-
 function buildTools() {
 
-    tools.forEach(tool => {
+    tools.forEach(t => {
 
-        const slug = tool.slug || slugify(tool.name);
-
-        const dir = path.join(outDir, "tools", slug);
+        const dir = path.join(outDir, "tools", t.slug);
 
         ensureDir(dir);
 
-        const tags = (tool.tags || [])
-            .map(t => `<a class="tag" href="/tags/${t}/">${t}</a>`)
-            .join(" ");
-
-        const related = tools
-            .filter(t => t.category === tool.category && t.slug !== tool.slug)
-            .slice(0, 5)
-            .map(t => `<li><a href="/tools/${t.slug}/">${t.name}</a></li>`)
-            .join("");
-
         const body = `
 
-<h1>${tool.name}</h1>
+<section class="section container">
 
-<p class="desc">
-${tool.description || ""}
-</p>
+<h1>${t.name}</h1>
+
+<p>${t.description || ""}</p>
 
 <p>
-<a class="btn" href="${tool.url || "#"}" target="_blank">
-公式サイトを見る
+
+<a href="${t.url || "#"}" target="_blank">
+公式サイト
 </a>
+
 </p>
 
-${renderList("主な機能", tool.features)}
-
-${renderList("用途", tool.use_cases)}
-
-${renderList("メリット", tool.pros)}
-
-${renderList("デメリット", tool.cons)}
-
-${tool.pricing ? `<h3>料金</h3><p>${tool.pricing}</p>` : ""}
-
-${tool.platforms ?
-                `<h3>対応プラットフォーム</h3>
-<ul>
-${tool.platforms.map(p => `<li>${p}</li>`).join("")}
-</ul>` : ""}
-
-${tool.api !== undefined ?
-                `<h3>API</h3>
-<p>${tool.api ? "あり" : "なし"}</p>` : ""}
-
-<div class="tags">
-${tags}
-</div>
-
-<h3>関連AIツール</h3>
-
-<ul>
-${related}
-</ul>
+</section>
 
 `;
 
-        const html = layout(tool.name, body);
+        const html = layout(t.name, body);
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
@@ -190,92 +119,11 @@ ${related}
 
 }
 
-/* =========================
-   TAGS
-========================= */
+function buildList() {
 
-function buildTags() {
+    const items = tools.map(t => `
 
-    const tagMap = {};
-
-    tools.forEach(t => {
-
-        (t.tags || []).forEach(tag => {
-
-            if (!tagMap[tag]) tagMap[tag] = [];
-
-            tagMap[tag].push(t);
-
-        });
-
-    });
-
-    Object.keys(tagMap).forEach(tag => {
-
-        const dir = path.join(outDir, "tags", tag);
-
-        ensureDir(dir);
-
-        let items = "";
-
-        tagMap[tag].forEach(t => {
-
-            items += `<li><a href="/tools/${t.slug}/">${t.name}</a></li>`;
-
-        });
-
-        const body = `
-
-<h1>${tag} AIツール</h1>
-
-<ul>
-
-${items}
-
-</ul>
-
-`;
-
-        const html = layout(`${tag} AIツール`, body);
-
-        fs.writeFileSync(
-            path.join(dir, "index.html"),
-            html
-        );
-
-    });
-
-}
-
-/* =========================
-   CATEGORIES
-========================= */
-
-function buildCategories() {
-
-    const catMap = {};
-
-    tools.forEach(t => {
-
-        if (!catMap[t.category]) catMap[t.category] = [];
-
-        catMap[t.category].push(t);
-
-    });
-
-    Object.keys(catMap).forEach(cat => {
-
-        const dir = path.join(outDir, "categories", cat);
-
-        ensureDir(dir);
-
-        let items = "";
-
-        catMap[cat].forEach(t => {
-
-            items += `
-
-<li>
+<div class="card">
 
 <a href="/tools/${t.slug}/">
 
@@ -289,25 +137,96 @@ ${t.description || ""}
 
 </p>
 
-</li>
+</div>
 
-`;
+`).join("");
 
-        });
+    const body = `
 
-        const body = `
+<section class="section container">
 
-<h1>${cat} AIツール</h1>
+<h1>AIツール一覧</h1>
 
-<ul>
+<div class="grid">
 
 ${items}
 
-</ul>
+</div>
+
+</section>
 
 `;
 
-        const html = layout(`${cat} AIツール`, body);
+    const html = layout("AIツール一覧", body);
+
+    const dir = path.join(outDir, "ai-tools");
+
+    ensureDir(dir);
+
+    fs.writeFileSync(
+        path.join(dir, "index.html"),
+        html
+    );
+
+}
+
+function buildCategories() {
+
+    const map = {};
+
+    tools.forEach(t => {
+
+        if (!t.category) return;
+
+        if (!map[t.category]) map[t.category] = [];
+
+        map[t.category].push(t);
+
+    });
+
+    Object.entries(map).forEach(([cat, list]) => {
+
+        const dir = path.join(outDir, "category", slug(cat));
+
+        ensureDir(dir);
+
+        const items = list.map(t => `
+
+<div class="card">
+
+<a href="/tools/${t.slug}/">
+
+${t.name}
+
+</a>
+
+<p>
+
+${t.description || ""}
+
+</p>
+
+</div>
+
+`).join("");
+
+        const body = `
+
+<section class="section container">
+
+<h1>${cat} AIツール</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
+`;
+
+        const html = layout(cat + " AIツール", body);
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
@@ -318,37 +237,45 @@ ${items}
 
 }
 
-/* =========================
-   LIST
-========================= */
+function buildCategoryIndex() {
 
-function buildList() {
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))];
 
-    const dir = path.join(outDir, "ai-tools");
+    const items = cats.map(c => `
 
-    ensureDir(dir);
+<div class="card">
 
-    let items = "";
+<a href="/category/${slug(c)}/">
 
-    tools.forEach(t => {
+${c}
 
-        items += `<li><a href="/tools/${t.slug}/">${t.name}</a></li>`;
+</a>
 
-    });
+</div>
+
+`).join("");
 
     const body = `
 
-<h1>AIツール一覧</h1>
+<section class="section container">
 
-<ul class="tool-list">
+<h1>AIツールカテゴリ</h1>
+
+<div class="grid">
 
 ${items}
 
-</ul>
+</div>
+
+</section>
 
 `;
 
-    const html = layout("AIツール一覧", body);
+    const html = layout("AIツールカテゴリ", body);
+
+    const dir = path.join(outDir, "category");
+
+    ensureDir(dir);
 
     fs.writeFileSync(
         path.join(dir, "index.html"),
@@ -357,23 +284,56 @@ ${items}
 
 }
 
-/* =========================
-   HOME
-========================= */
-
 function buildHome() {
 
     const featured = tools.slice(0, 8).map(t => `
+
 <div class="card">
-<a href="/tools/${t.slug}/">${t.name}</a>
-<p>${t.description || ""}</p>
+
+<a href="/tools/${t.slug}/">
+
+${t.name}
+
+</a>
+
+<p>
+
+${t.description || ""}
+
+</p>
+
 </div>
+
 `).join("");
 
     const latest = tools.slice(-8).map(t => `
+
 <div class="card">
-<a href="/tools/${t.slug}/">${t.name}</a>
+
+<a href="/tools/${t.slug}/">
+
+${t.name}
+
+</a>
+
 </div>
+
+`).join("");
+
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))].slice(0, 8);
+
+    const catHtml = cats.map(c => `
+
+<div class="card">
+
+<a href="/category/${slug(c)}/">
+
+${c}
+
+</a>
+
+</div>
+
 `).join("");
 
     const body = `
@@ -381,10 +341,29 @@ function buildHome() {
 <section class="hero">
 
 <h2>AIツール検索・比較サイト</h2>
-<p>300以上のAIツールをカテゴリ別に整理</p>
+
+<p>
+
+300以上のAIツールをカテゴリ別に整理
+
+</p>
 
 <div class="search">
-<input id="searchBox" placeholder="AIツールを検索">
+
+<input id="searchBox" placeholder="AIツール検索">
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<h2>AIツールカテゴリ</h2>
+
+<div class="grid">
+
+${catHtml}
+
 </div>
 
 </section>
@@ -394,7 +373,9 @@ function buildHome() {
 <h2>人気AIツール</h2>
 
 <div class="grid">
+
 ${featured}
+
 </div>
 
 </section>
@@ -404,18 +385,20 @@ ${featured}
 <h2>最新AIツール</h2>
 
 <div class="grid">
+
 ${latest}
+
 </div>
 
 </section>
 
 <section class="section container">
 
-<h2>AIツール一覧</h2>
+<a href="/ai-tools/">
 
-<p>
-<a href="/ai-tools/">すべてのAIツールを見る →</a>
-</p>
+すべてのAIツールを見る →
+
+</a>
 
 </section>
 
@@ -450,49 +433,6 @@ c.style.display=t.includes(q)?"block":"none";
 
 }
 
-/* =========================
-   SITEMAP
-========================= */
-
-function buildSitemap() {
-
-    let urls = "";
-
-    tools.forEach(t => {
-
-        urls += `
-
-<url>
-
-<loc>/tools/${t.slug}/</loc>
-
-</url>
-
-`;
-
-    });
-
-    const xml = `
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-${urls}
-
-</urlset>
-
-`;
-
-    fs.writeFileSync(
-        path.join(outDir, "sitemap.xml"),
-        xml
-    );
-
-}
-
-/* =========================
-   BUILD
-========================= */
-
 function build() {
 
     ensureDir(outDir);
@@ -500,11 +440,14 @@ function build() {
     copyPublic();
 
     buildTools();
-    buildTags();
-    buildCategories();
+
     buildList();
+
+    buildCategoryIndex();
+
+    buildCategories();
+
     buildHome();
-    buildSitemap();
 
 }
 
