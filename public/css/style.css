@@ -107,6 +107,9 @@ nav a {
     padding: 22px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: .15s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -125,6 +128,8 @@ nav a {
     font-size: 16px;
     color: #666;
     margin-top: 10px;
+
+    flex-grow: 1;
 }
 
 /* card header */
