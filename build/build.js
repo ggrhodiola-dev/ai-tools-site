@@ -382,7 +382,12 @@ ${items}
 
 function buildHome() {
 
-    const featured = tools.map(t => `
+    const featured = tools
+        .filter(t =>
+            ["chatbot", "image", "video", "search"].includes(t.category)
+        )
+        .slice(0, 8)
+        .map(t => `
 
 <div class="card">
 
