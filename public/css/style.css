@@ -8,7 +8,6 @@ body {
     background: #f6f7fb;
     color: #222;
     line-height: 1.6;
-    font-size: 24px;
 }
 
 /* header */
@@ -26,7 +25,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 nav a {
@@ -46,7 +45,7 @@ nav a {
 }
 
 .hero h2 {
-    font-size: 34px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -109,7 +108,7 @@ nav a {
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-top: 8px;
 }
@@ -179,7 +178,7 @@ nav a {
 }
 
 .tool-meta {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-bottom: 10px;
 }
@@ -187,7 +186,7 @@ nav a {
 /* breadcrumb */
 
 .breadcrumb {
-    font-size: 14px;
+    font-size: 16px;
     margin: 10px 0 20px;
 }
 
@@ -205,7 +204,7 @@ nav a {
 footer {
     text-align: center;
     padding: 30px;
-    font-size: 13px;
+    font-size: 15px;
     color: #888;
 }
 
@@ -219,7 +218,7 @@ footer {
 }
 
 .tag {
-    font-size: 11px;
+    font-size: 13px;
     background: #eef2ff;
     color: #4f46e5;
     padding: 3px 7px;
