@@ -25,7 +25,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 nav a {
@@ -33,6 +33,7 @@ nav a {
     text-decoration: none;
     color: #444;
     font-weight: 500;
+    font-size: 18px;
 }
 
 /* hero */
@@ -45,12 +46,13 @@ nav a {
 }
 
 .hero h2 {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
 .hero p {
     opacity: 0.9;
+    font-size: 20px;
 }
 
 /* search */
@@ -64,7 +66,7 @@ nav a {
     padding: 12px;
     border-radius: 6px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* section */
@@ -76,6 +78,7 @@ nav a {
 .section h1,
 .section h2 {
     margin-bottom: 20px;
+    font-size: 30px;
 }
 
 /* grid */
@@ -105,10 +108,11 @@ nav a {
     text-decoration: none;
     color: #222;
     font-weight: 600;
+    font-size: 18px;
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     margin-top: 8px;
 }
@@ -142,7 +146,7 @@ nav a {
     justify-content: center;
     background: #e5e7eb;
     color: #555;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     flex: 0 0 22px;
 }
@@ -172,13 +176,13 @@ nav a {
     justify-content: center;
     background: #e5e7eb;
     color: #555;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     flex: 0 0 38px;
 }
 
 .tool-meta {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     margin-bottom: 10px;
 }
@@ -186,7 +190,7 @@ nav a {
 /* breadcrumb */
 
 .breadcrumb {
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 0 20px;
 }
 
@@ -204,7 +208,7 @@ nav a {
 footer {
     text-align: center;
     padding: 30px;
-    font-size: 15px;
+    font-size: 17px;
     color: #888;
 }
 
@@ -218,10 +222,10 @@ footer {
 }
 
 .tag {
-    font-size: 13px;
+    font-size: 15px;
     background: #eef2ff;
     color: #4f46e5;
-    padding: 3px 7px;
+    padding: 4px 8px;
     border-radius: 6px;
 }
 
