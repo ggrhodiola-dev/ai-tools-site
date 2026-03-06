@@ -1,146 +1,193 @@
-function buildTools() {
+function buildHome() {
 
-    tools.forEach(t => {
+    const toolCount = tools.length
 
-        const dir = path.join(outDir, "tools", t.slug)
+    /* -----------------------
+    人気ツール（ランダム）
+    ----------------------- */
 
-        ensureDir(dir)
+    const shuffled = [...tools].sort(() => 0.5 - Math.random())
 
-        const related = tools
-            .filter(x => x.slug !== t.slug && x.category === t.category)
-            .slice(0, 6)
+    const popular = shuffled.slice(0, 8)
 
-        const relatedHtml = related.map(r => `
+    const popularHtml = popular.map(t => {
+
+        let domain = ""
+
+        try {
+            domain = new URL(t.url).hostname
+        } catch (e) { }
+
+        const logo = domain
+            ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}`
+            : ""
+
+        return `
+<div class="card">
+
+<div class="card-head">
+<img class="card-logo" src="${logo}">
+<h3>
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
+</a>
+</h3>
+</div>
+
+<p>${esc(shortDesc(t))}</p>
+
+</div>
+`
+
+    }).join("")
+
+
+    /* -----------------------
+    ランキング
+    ----------------------- */
+
+    const ranking = tools.slice(0, 10)
+
+    const rankingHtml = ranking.map((t, i) => `
 
 <li>
-<a href="/tools/${r.slug}/">
-${esc(r.name)}
+<span class="rank-number">${i + 1}</span>
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
 </a>
 </li>
 
 `).join("")
 
 
-        /* -------------------------
-        タグリンク
-        ------------------------- */
+    /* -----------------------
+    新着ツール
+    ----------------------- */
 
-        const tagLinks = (t.tags || [])
-            .map(tag => `<a href="/tag/${slug(tag)}/">${esc(tag)}</a>`)
-            .join(" ")
+    const latest = [...tools].reverse().slice(0, 8)
 
+    const latestHtml = latest.map(t => `
 
-        /* -------------------------
-        ドメイン取得
-        ------------------------- */
+<li>
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
+</a>
+</li>
 
-        let domain = ""
-
-        try {
-            domain = new URL(t.url).hostname
-        } catch (e) {
-            domain = ""
-        }
+`).join("")
 
 
-        /* -------------------------
-        ロゴ
-        ------------------------- */
+    /* -----------------------
+    カテゴリ
+    ----------------------- */
 
-        const logo = domain
-            ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}`
-            : ""
+    const catHtml = Object.keys(categories).map(c => `
 
+<a class="cat-card" href="/category/${slug(c)}/">
 
-        /* -------------------------
-        スクリーンショット
-        ------------------------- */
+${esc(c)}
 
-        const screenshot = t.url
-            ? `https://image.thum.io/get/width/1200/${t.url}`
-            : ""
+<span>${categories[c].length}</span>
 
-
-        /* -------------------------
-        本文
-        ------------------------- */
-
-        const body = `
-
-${breadcrumb(t.category, t.name)}
-
-<section class="section container">
-
-<div class="tool-header">
-
-<img class="tool-logo" src="${logo}" alt="${esc(t.name)}">
-
-<h1>${esc(t.name)}</h1>
-
-</div>
-
-<div class="tool-shot">
-
-<img src="${screenshot}" alt="${esc(t.name)} screenshot">
-
-</div>
-
-<p class="tool-meta">
-
-カテゴリ:
-<a href="/category/${slug(t.category)}/">
-${esc(t.category)}
 </a>
 
-</p>
+`).join("")
 
-<p class="tool-tags">
 
-${tagLinks}
+    /* -----------------------
+    本文
+    ----------------------- */
 
-</p>
+    const body = `
+
+<section class="hero">
+
+<h2>AIツール比較サイト</h2>
 
 <p>
 
-${esc(safeDesc(t))}
+${toolCount}+ のAIツールを検索・比較できるディレクトリ
 
 </p>
 
-<p>
+<div class="search">
 
-<a class="btn" href="${safeUrl(t.url)}" target="_blank">
-公式サイト
-</a>
+<input id="searchBox" placeholder="AIツール検索">
 
-</p>
+</div>
 
 </section>
 
+
 <section class="section container">
 
-<h2>関連AIツール</h2>
+<h2>人気AIツール</h2>
+
+<div class="grid">
+
+${popularHtml}
+
+</div>
+
+</section>
+
+
+<section class="section container">
+
+<h2>AIツールランキング</h2>
+
+<ol class="ranking">
+
+${rankingHtml}
+
+</ol>
+
+</section>
+
+
+<section class="section container">
+
+<h2>新着AIツール</h2>
 
 <ul>
 
-${relatedHtml}
+${latestHtml}
 
 </ul>
 
 </section>
 
+
+<section class="section container">
+
+<h2>AIツールカテゴリ</h2>
+
+<div class="cat-grid">
+
+${catHtml}
+
+</div>
+
+</section>
+
 `
 
-        const html = layout(
-            `${t.name} | AIツール`,
-            body,
-            `${t.name}のAIツール情報`
-        )
+    const html = layout(
 
-        fs.writeFileSync(
-            path.join(dir, "index.html"),
-            html
-        )
+        "AIツール比較サイト",
 
-    })
+        body,
+
+        "AIツールを検索・比較できるディレクトリ"
+
+    )
+
+    fs.writeFileSync(
+
+        path.join(outDir, "index.html"),
+
+        html
+
+    )
 
 }
