@@ -539,7 +539,7 @@ ${icon[c] || "🤖"} ${esc(c)}
 
 <section class="hero">
 
-<h2>AIツール比較サイト</h2>
+<h2>AIツール紹介サイト</h2>
 
 <p>
 
@@ -602,7 +602,7 @@ ${catHtml}
 
 `
 
-    const html = layout("AIツール比較サイト", body)
+    const html = layout("AIツール紹介サイト", body)
 
     fs.writeFileSync(path.join(outDir, "index.html"), html)
 
