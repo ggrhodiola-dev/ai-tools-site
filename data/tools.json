@@ -7,13 +7,13 @@
     "category": "chatbot",
     "tags": [
       "chatbot",
-      "text",
       "assistant",
       "writing",
-      "coding"
+      "coding",
+      "ai"
     ],
     "free_plan": true,
-    "description": "OpenAIの対話型AIアシスタント。文章作成、要約、調査、アイデア出し、プログラミング支援まで幅広く使えます。"
+    "description": "文章作成、要約、翻訳、アイデア出し、プログラミング支援など幅広い用途に利用できる対話型AIアシスタントです。"
   },
   {
     "id": 2,
@@ -28,7 +28,7 @@
       "design"
     ],
     "free_plan": false,
-    "description": "高品質なアートやコンセプト画像を生成できる人気のAI画像生成サービス。ビジュアル表現の強さで知られます。"
+    "description": "テキストプロンプトからアート作品やイラスト、コンセプトデザインなどを生成できるAI画像生成サービスです。"
   },
   {
     "id": 3,
@@ -38,13 +38,12 @@
     "category": "chatbot",
     "tags": [
       "chatbot",
-      "text",
       "assistant",
       "analysis",
       "writing"
     ],
     "free_plan": true,
-    "description": "Anthropicの対話型AI。長文の読解や要約、文章作成、分析、コーディング支援に強いAIアシスタントです。"
+    "description": "長文の読解や要約、分析、文章作成、コーディング支援などに強い対話型AIアシスタントです。"
   },
   {
     "id": 4,
@@ -54,13 +53,12 @@
     "category": "chatbot",
     "tags": [
       "chatbot",
-      "text",
       "assistant",
       "google",
       "multimodal"
     ],
     "free_plan": true,
-    "description": "Googleの対話型AIアシスタント。検索との相性がよく、文章作成、要約、発想支援、画像理解などに対応します。"
+    "description": "検索連携や画像理解などに対応し、文章作成や調査、アイデア生成などに利用できる対話型AIです。"
   },
   {
     "id": 5,
@@ -71,11 +69,11 @@
     "tags": [
       "search",
       "research",
-      "answer-engine",
-      "web"
+      "ai-search",
+      "answers"
     ],
     "free_plan": true,
-    "description": "Web検索と回答生成を組み合わせたAI検索サービス。出典を見ながら調査や情報収集を進めたいときに便利です。"
+    "description": "Web情報をAIが整理して回答し、出典を確認しながらリサーチを進められるAI検索エンジンです。"
   },
   {
     "id": 6,
@@ -90,7 +88,7 @@
       "creator"
     ],
     "free_plan": true,
-    "description": "動画生成と編集に強いAIクリエイティブツール。テキストや画像から映像を作る機能を備えています。"
+    "description": "テキストや画像から動画を生成したり、AIによる映像編集を行えるクリエイティブ制作ツールです。"
   },
   {
     "id": 7,
@@ -100,12 +98,12 @@
     "category": "image",
     "tags": [
       "image",
-      "game-assets",
       "image-generation",
-      "design"
+      "design",
+      "game-assets"
     ],
     "free_plan": true,
-    "description": "ゲームアセットやイラスト制作にも使いやすいAI画像生成ツール。スタイル調整や素材作成に向いています。"
+    "description": "ゲームアセットやイラスト制作などに向いたAI画像生成ツールで、スタイル調整や素材作成にも利用できます。"
   },
   {
     "id": 8,
@@ -115,11 +113,11 @@
     "category": "image",
     "tags": [
       "image",
-      "image-generation",
+      "stable-diffusion",
       "models"
     ],
     "free_plan": true,
-    "description": "画像生成モデル群で知られるStability AIのサービス群。DreamStudioなどの生成系ツールにつながります。"
+    "description": "Stable Diffusionなどの画像生成モデルを開発するAI企業のサービス群で、生成系ツールの基盤として利用されています。"
   },
   {
     "id": 9,
@@ -133,7 +131,7 @@
       "design"
     ],
     "free_plan": true,
-    "description": "画像生成とデザイン作業を行いやすいAI画像ツール。SNS用ビジュアル制作にも使えます。"
+    "description": "AI画像生成とデザイン作業をまとめて行えるツールで、SNS用ビジュアル制作などに利用できます。"
   },
   {
     "id": 10,
@@ -143,11 +141,11 @@
     "category": "chatbot",
     "tags": [
       "chatbot",
-      "roleplay",
-      "conversation"
+      "conversation",
+      "roleplay"
     ],
     "free_plan": true,
-    "description": "キャラクター会話に特化した対話型AIサービス。雑談やロールプレイ用途で人気があります。"
+    "description": "キャラクターとの会話やロールプレイに特化した対話型AIサービスです。"
   },
   {
     "id": 11,
@@ -158,11 +156,10 @@
     "tags": [
       "video",
       "video-generation",
-      "creator",
       "animation"
     ],
     "free_plan": true,
-    "description": "テキストや画像から短い動画を生成できるAI動画ツール。SNS向けの映像制作とも相性が良いです。"
+    "description": "テキストや画像から短い動画を生成できるAI動画制作ツールです。"
   },
   {
     "id": 12,
@@ -177,7 +174,7 @@
       "voice-cloning"
     ],
     "free_plan": true,
-    "description": "高品質な音声合成とボイスクローンで知られるAI音声ツール。ナレーションや読み上げ制作に向いています。"
+    "description": "高品質な音声合成やボイスクローン機能を提供するAI音声ツールです。"
   },
   {
     "id": 13,
@@ -186,13 +183,12 @@
     "url": "https://suno.com",
     "category": "audio",
     "tags": [
-      "audio",
       "music",
-      "music-generation",
-      "song"
+      "audio",
+      "music-generation"
     ],
     "free_plan": true,
-    "description": "歌詞や指示文から楽曲を生成できるAI音楽ツール。手軽にボーカル付きの曲を作りたい場合に便利です。"
+    "description": "歌詞や指示文からボーカル付きの楽曲を生成できるAI音楽生成サービスです。"
   },
   {
     "id": 14,
@@ -203,11 +199,10 @@
     "tags": [
       "video",
       "avatar",
-      "presenter",
-      "marketing"
+      "presentation"
     ],
     "free_plan": true,
-    "description": "AIアバター動画を簡単に作れる動画生成サービス。説明動画やマーケティング動画制作に使われます。"
+    "description": "AIアバターを使った動画を簡単に作成できる動画生成ツールです。"
   },
   {
     "id": 15,
@@ -218,11 +213,10 @@
     "tags": [
       "video",
       "avatar",
-      "training",
-      "presenter"
+      "training"
     ],
     "free_plan": false,
-    "description": "AIアバターを使った説明動画や研修動画の作成に強いサービス。企業の動画制作にも広く利用されています。"
+    "description": "AIアバターを利用した説明動画や研修動画の制作に向いた動画生成サービスです。"
   },
   {
     "id": 16,
@@ -232,12 +226,11 @@
     "category": "audio",
     "tags": [
       "audio",
-      "podcast",
       "editing",
       "transcription"
     ],
     "free_plan": true,
-    "description": "音声・動画の文字起こしと編集を一体化したクリエイターツール。ポッドキャスト編集にも広く使われます。"
+    "description": "音声や動画を文字ベースで編集できるクリエイターツールです。"
   },
   {
     "id": 17,
@@ -248,11 +241,10 @@
     "tags": [
       "writing",
       "marketing",
-      "copywriting",
-      "sales"
+      "copywriting"
     ],
     "free_plan": true,
-    "description": "マーケティング文案や営業文面の下書きに向くAIライティングツール。広告・LP・メール作成に使われます。"
+    "description": "マーケティング文案や広告コピーなどを生成できるAIライティングツールです。"
   },
   {
     "id": 18,
@@ -263,11 +255,10 @@
     "tags": [
       "writing",
       "marketing",
-      "copywriting",
-      "brand"
+      "copywriting"
     ],
     "free_plan": false,
-    "description": "マーケティング向けのAIライティングツール。ブランド文体を保ちつつ記事や広告文を作りやすいのが特徴です。"
+    "description": "ブランドトーンを保ちながら記事や広告文を作成できるAIライティングツールです。"
   },
   {
     "id": 19,
@@ -277,12 +268,11 @@
     "category": "writing",
     "tags": [
       "writing",
-      "marketing",
       "seo",
       "copywriting"
     ],
     "free_plan": true,
-    "description": "ブログ記事、広告文、商品説明などを作成しやすいAIライティングサービス。SEO用途でも利用されています。"
+    "description": "ブログ記事や広告文、商品説明などを作成できるAIライティングサービスです。"
   },
   {
     "id": 20,
@@ -292,25 +282,24 @@
     "category": "writing",
     "tags": [
       "writing",
-      "copywriting",
-      "marketing"
+      "copywriting"
     ],
     "free_plan": true,
-    "description": "短文コピーやブログの下書きなどに使いやすいAIライティングツール。手軽さと導入のしやすさが魅力です。"
+    "description": "短文コピーやブログ下書きなどを手軽に生成できるAIライティングツールです。"
   },
   {
     "id": 21,
     "name": "Sudowrite",
     "slug": "sudowrite",
-    "url": "",
+    "url": "https://www.sudowrite.com",
     "category": "writing",
     "tags": [
       "writing",
       "editing",
-      "copywriting"
+      "creative-writing"
     ],
     "free_plan": true,
-    "description": "Sudowriteは文章作成やリライトを支援するAIツールです。記事作成、校正、要約、コピー制作に向いています。"
+    "description": "小説やクリエイティブ文章の作成を支援するAIライティングツールです。"
   },
   {
     "id": 22,
@@ -321,11 +310,10 @@
     "tags": [
       "writing",
       "paraphrase",
-      "grammar",
-      "rewrite"
+      "grammar"
     ],
     "free_plan": true,
-    "description": "英文のリライト、言い換え、要約で人気のAI文章支援ツール。校正や表現の調整にも使われます。"
+    "description": "文章の言い換えや要約、文法チェックなどを行えるAI文章支援ツールです。"
   },
   {
     "id": 23,
@@ -336,26 +324,24 @@
     "tags": [
       "writing",
       "grammar",
-      "proofreading",
-      "english"
+      "proofreading"
     ],
     "free_plan": true,
-    "description": "英文の文法チェックや表現改善に強い定番ツール。AI補助により文体や明確さの改善も支援します。"
+    "description": "英文の文法チェックや文章改善を行えるAI校正ツールです。"
   },
   {
     "id": 24,
     "name": "Notion AI",
     "slug": "notion-ai",
-    "url": "https://www.notion.com/product/ai",
+    "url": "https://www.notion.so/product/ai",
     "category": "productivity",
     "tags": [
       "productivity",
       "notes",
-      "writing",
       "workspace"
     ],
     "free_plan": true,
-    "description": "Notion内で文章作成、要約、検索補助などを行えるAI機能。ドキュメント管理やナレッジ整理と相性が良いです。"
+    "description": "ドキュメント内で文章作成や要約、検索補助などを行えるAI機能です。"
   },
   {
     "id": 25,
@@ -365,11 +351,10 @@
     "category": "presentation",
     "tags": [
       "presentation",
-      "slides",
-      "storytelling"
+      "slides"
     ],
     "free_plan": true,
-    "description": "ストーリー性のある資料やプレゼンをAIで組み立てやすい作成ツール。提案資料の下書きにも向きます。"
+    "description": "ストーリー形式のプレゼン資料をAIで作成できるツールです。"
   },
   {
     "id": 26,
@@ -379,12 +364,10 @@
     "category": "presentation",
     "tags": [
       "presentation",
-      "slides",
-      "docs",
-      "productivity"
+      "docs"
     ],
     "free_plan": true,
-    "description": "AIでプレゼン資料やドキュメント、簡易Webページを素早く作れる作成支援ツールです。"
+    "description": "プレゼン資料やドキュメントをAIで作成できるコンテンツ制作ツールです。"
   },
   {
     "id": 27,
@@ -394,11 +377,10 @@
     "category": "presentation",
     "tags": [
       "presentation",
-      "slides",
-      "design"
+      "slides"
     ],
     "free_plan": true,
-    "description": "見栄えの良いスライドを作りやすいプレゼン作成ツール。レイアウト調整を効率化できます。"
+    "description": "レイアウト調整を自動化し、見栄えの良いスライドを作成できるプレゼンツールです。"
   },
   {
     "id": 28,
@@ -408,12 +390,11 @@
     "category": "design",
     "tags": [
       "design",
-      "presentation",
       "image",
-      "social"
+      "presentation"
     ],
     "free_plan": true,
-    "description": "CanvaのAI機能群。画像生成、文章補助、プレゼン資料作成などを1つのデザイン環境で行えます。"
+    "description": "画像生成や文章補助、プレゼン作成などをまとめて利用できるCanvaのAI機能群です。"
   },
   {
     "id": 29,
@@ -423,13 +404,11 @@
     "category": "image",
     "tags": [
       "image",
-      "video",
-      "audio",
-      "design",
-      "creative"
+      "image-generation",
+      "design"
     ],
     "free_plan": true,
-    "description": "Adobeの生成AIクリエイティブツール群。画像生成や画像編集に加え、動画・音声・デザイン制作まで幅広く支援します。"
+    "description": "テキストから画像やデザイン素材を生成できるAdobeの生成AIツールです。"
   },
   {
     "id": 30,
@@ -1502,60 +1481,69 @@
     "name": "LongShot AI",
     "slug": "longshot-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "ai"
     ],
     "free_plan": true,
-    "description": "LongShot AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "記事作成やリサーチ、文章生成などを支援するAIライティングツールです。"
   },
   {
     "id": 102,
     "name": "AI Dungeon",
     "slug": "ai-dungeon",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "story",
+      "roleplay",
+      "ai"
     ],
     "free_plan": true,
-    "description": "AI DungeonはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIと対話しながら物語を生成できるインタラクティブストーリー生成サービスです。"
   },
   {
     "id": 103,
     "name": "NovelAI",
     "slug": "novelai",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "story",
+      "ai"
     ],
     "free_plan": true,
-    "description": "NovelAIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "小説やストーリー生成などを支援するAIライティングツールです。"
   },
   {
     "id": 104,
     "name": "StoryLab AI",
     "slug": "storylab-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "content",
+      "ai"
     ],
     "free_plan": true,
-    "description": "StoryLab AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "記事やマーケティングコンテンツの作成を支援するAIライティングツールです。"
   },
   {
     "id": 105,
     "name": "Plot Factory",
     "slug": "plot-factory",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "story",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Plot FactoryはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "物語構成やストーリー作成を支援するAIライティングツールです。"
   },
   {
     "id": 106,
@@ -1568,7 +1556,7 @@
       "marketplace"
     ],
     "free_plan": true,
-    "description": "PromptBaseはAI向けプロンプトを探したり共有したりしやすいサービスです。活用例の収集にも向いています。"
+    "description": "AI向けプロンプトを検索・共有できるマーケットプレイスです。"
   },
   {
     "id": 107,
@@ -1578,11 +1566,10 @@
     "category": "prompt-marketplace",
     "tags": [
       "prompts",
-      "images",
       "community"
     ],
     "free_plan": true,
-    "description": "PromptHeroはAI向けプロンプトを探したり共有したりしやすいサービスです。活用例の収集にも向いています。"
+    "description": "AI画像生成などのプロンプトを共有・検索できるコミュニティサービスです。"
   },
   {
     "id": 108,
@@ -1591,12 +1578,12 @@
     "url": "https://www.promptlayer.com",
     "category": "development",
     "tags": [
+      "llm",
       "prompts",
-      "observability",
-      "llmops"
+      "development"
     ],
     "free_plan": true,
-    "description": "PromptLayerは開発者向けのAIツールです。コード生成、補完、調査、実装支援などに利用できます。"
+    "description": "AIアプリ開発でプロンプト管理やログ監視を行える開発者向けツールです。"
   },
   {
     "id": 109,
@@ -1605,10 +1592,11 @@
     "url": "",
     "category": "ai-tool",
     "tags": [
-      "ai-tool"
+      "prompt",
+      "ai"
     ],
     "free_plan": true,
-    "description": "PromptPerfectはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIプロンプトを最適化して精度を高めるためのプロンプト最適化ツールです。"
   },
   {
     "id": 110,
@@ -1617,154 +1605,167 @@
     "url": "",
     "category": "ai-tool",
     "tags": [
-      "ai-tool"
+      "prompt",
+      "ai"
     ],
     "free_plan": true,
-    "description": "PromptableはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIプロンプトの管理や最適化を行えるツールです。"
   },
   {
     "id": 111,
     "name": "Mage Space",
     "slug": "mage-space",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "generation"
     ],
     "free_plan": true,
-    "description": "Mage SpaceはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "Stable Diffusion系の画像生成をブラウザから利用できるAI画像生成サービスです。"
   },
   {
     "id": 112,
     "name": "InvokeAI",
     "slug": "invokeai",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "stable-diffusion"
     ],
     "free_plan": true,
-    "description": "InvokeAIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "Stable Diffusionベースの画像生成を行えるAI画像生成ツールです。"
   },
   {
     "id": 113,
     "name": "Automatic1111",
     "slug": "automatic1111",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "stable-diffusion",
+      "image"
     ],
     "free_plan": true,
-    "description": "Automatic1111はAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "Stable Diffusionを利用した画像生成を行うための人気WebUIツールです。"
   },
   {
     "id": 114,
     "name": "Fooocus",
     "slug": "fooocus",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "generation"
     ],
     "free_plan": true,
-    "description": "FooocusはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "シンプルな操作でAI画像生成を行えるStable Diffusion系ツールです。"
   },
   {
     "id": 115,
     "name": "ComfyUI",
     "slug": "comfyui",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "workflow"
     ],
     "free_plan": true,
-    "description": "ComfyUIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "ノードベースのUIでAI画像生成ワークフローを構築できるツールです。"
   },
   {
     "id": 116,
     "name": "ControlNet",
     "slug": "controlnet",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "stable-diffusion"
     ],
     "free_plan": true,
-    "description": "ControlNetはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像生成の構図やポーズを制御できるStable Diffusion拡張モデルです。"
   },
   {
     "id": 117,
     "name": "Segment Anything",
     "slug": "segment-anything",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "segmentation"
     ],
     "free_plan": true,
-    "description": "Segment AnythingはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像内の物体を自動分割できるAI画像解析モデルです。"
   },
   {
     "id": 118,
     "name": "DeepFaceLab",
     "slug": "deepfacelab",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "deepfake",
+      "video"
     ],
     "free_plan": true,
-    "description": "DeepFaceLabはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "顔交換などのディープフェイク動画を作成できるAIツールです。"
   },
   {
     "id": 119,
     "name": "FaceSwap",
     "slug": "faceswap",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "deepfake",
+      "video"
     ],
     "free_plan": true,
-    "description": "FaceSwapはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "顔入れ替えなどを行えるディープフェイク生成ツールです。"
   },
   {
     "id": 120,
     "name": "Avatarify",
     "slug": "avatarify",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "avatar",
+      "video"
     ],
     "free_plan": true,
-    "description": "AvatarifyはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "リアルタイムで顔アニメーションを生成できるAIツールです。"
   },
   {
     "id": 121,
     "name": "Lensa AI",
     "slug": "lensa-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "portrait"
     ],
     "free_plan": true,
-    "description": "Lensa AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIによる写真加工やポートレート生成を行える画像編集ツールです。"
   },
   {
     "id": 122,
     "name": "Fotor AI",
     "slug": "fotor-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "editing"
     ],
     "free_plan": true,
-    "description": "Fotor AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI画像生成や写真編集を行える画像加工ツールです。"
   },
   {
     "id": 123,
@@ -1774,22 +1775,23 @@
     "category": "image",
     "tags": [
       "image",
-      "ai"
+      "editing"
     ],
     "free_plan": true,
-    "description": "Pixlr AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "AI画像生成や画像編集を行えるオンラインデザインツールです。"
   },
   {
     "id": 124,
     "name": "Hotpot AI",
     "slug": "hotpot-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "design"
     ],
     "free_plan": true,
-    "description": "Hotpot AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像生成やデザイン素材作成を支援するAIクリエイティブツールです。"
   },
   {
     "id": 125,
@@ -1799,23 +1801,23 @@
     "category": "image",
     "tags": [
       "image",
-      "image-generation",
-      "design"
+      "colorization"
     ],
     "free_plan": true,
-    "description": "Palette FMはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "白黒写真をAIでカラー化できる画像加工ツールです。"
   },
   {
     "id": 126,
     "name": "Let's Enhance",
     "slug": "lets-enhance",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "upscale"
     ],
     "free_plan": true,
-    "description": "Let's EnhanceはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像の解像度をAIで高画質化できるアップスケールツールです。"
   },
   {
     "id": 127,
@@ -1825,12 +1827,10 @@
     "category": "image",
     "tags": [
       "image",
-      "editing",
-      "background-removal",
-      "upscale"
+      "editing"
     ],
     "free_plan": true,
-    "description": "画像生成や背景除去、アップスケールなど複数のAI画像編集機能を備えたツール群です。"
+    "description": "背景除去や画像生成など複数のAI画像編集機能を備えたツールです。"
   },
   {
     "id": 128,
@@ -1840,10 +1840,10 @@
     "category": "image",
     "tags": [
       "image",
-      "ai"
+      "vector"
     ],
     "free_plan": true,
-    "description": "Vectorizer AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "画像をベクター形式に変換できるAI画像処理ツールです。"
   },
   {
     "id": 129,
@@ -1852,12 +1852,11 @@
     "url": "https://www.logoai.com",
     "category": "design",
     "tags": [
-      "design",
       "logo",
       "branding"
     ],
     "free_plan": true,
-    "description": "LogoAIはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "AIを使ってロゴやブランド素材を作成できるデザインツールです。"
   },
   {
     "id": 130,
@@ -1866,12 +1865,11 @@
     "url": "",
     "category": "design",
     "tags": [
-      "design",
-      "branding",
-      "presentation"
+      "logo",
+      "branding"
     ],
     "free_plan": true,
-    "description": "Lookaはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "AIを使ってロゴやブランドデザインを作成できるツールです。"
   },
   {
     "id": 131,
@@ -1880,112 +1878,115 @@
     "url": "https://brandmark.io",
     "category": "design",
     "tags": [
-      "design",
       "logo",
       "branding"
     ],
     "free_plan": true,
-    "description": "Brandmarkはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "ブランドロゴやデザイン素材を生成できるAIデザインツールです。"
   },
   {
     "id": 132,
     "name": "Durable AI",
     "slug": "durable-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "website",
     "tags": [
-      "ai-tool"
+      "website",
+      "builder"
     ],
     "free_plan": true,
-    "description": "Durable AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで簡単にWebサイトを生成できるサイト作成ツールです。"
   },
   {
     "id": 133,
     "name": "10Web AI",
     "slug": "10web-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "website",
     "tags": [
-      "ai-tool"
+      "website",
+      "builder"
     ],
     "free_plan": true,
-    "description": "10Web AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使ってWordPressサイトを作成できるサイト構築ツールです。"
   },
   {
     "id": 134,
     "name": "Wix AI",
     "slug": "wix-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "website",
     "tags": [
-      "ai-tool"
+      "website",
+      "builder"
     ],
     "free_plan": true,
-    "description": "Wix AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIによるWebサイト作成機能を備えたサイトビルダーです。"
   },
   {
     "id": 135,
     "name": "Framer AI",
     "slug": "framer-ai",
     "url": "https://www.framer.com/ai",
-    "category": "design",
+    "category": "website",
     "tags": [
-      "design",
       "website",
       "landing-page"
     ],
     "free_plan": true,
-    "description": "Webページやランディングページの作成をAIで補助するFramerの機能です。"
+    "description": "AIを使ってWebページやランディングページを作成できるツールです。"
   },
   {
     "id": 136,
     "name": "Typedream AI",
     "slug": "typedream-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "website",
     "tags": [
-      "ai-tool"
+      "website",
+      "builder"
     ],
     "free_plan": true,
-    "description": "Typedream AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIでWebサイトやLPを生成できるサイト作成ツールです。"
   },
   {
     "id": 137,
     "name": "Hostinger AI Builder",
     "slug": "hostinger-ai-builder",
     "url": "",
-    "category": "design",
+    "category": "website",
     "tags": [
-      "design",
-      "ai"
+      "website",
+      "builder"
     ],
     "free_plan": true,
-    "description": "Hostinger AI Builderはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "AIを使ってWebサイトを自動生成できるサイトビルダーです。"
   },
   {
     "id": 138,
     "name": "TeleportHQ AI",
     "slug": "teleporthq-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "web",
+      "development"
     ],
     "free_plan": true,
-    "description": "TeleportHQ AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "WebサイトUIを生成できるAI開発ツールです。"
   },
   {
     "id": 139,
     "name": "Builder.io AI",
     "slug": "builder-io-ai",
     "url": "",
-    "category": "design",
+    "category": "development",
     "tags": [
-      "design",
-      "ai"
+      "web",
+      "development"
     ],
     "free_plan": true,
-    "description": "Builder.io AIはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "AIでUIコンポーネントやWebページを生成できる開発ツールです。"
   },
   {
     "id": 140,
@@ -1994,25 +1995,24 @@
     "url": "https://uizard.io",
     "category": "design",
     "tags": [
-      "design",
       "ui",
-      "wireframe",
       "prototype"
     ],
     "free_plan": true,
-    "description": "UIワイヤーフレームやアプリ画面のたたき台を作りやすいデザイン支援ツールです。"
+    "description": "アプリUIやワイヤーフレームを生成できるデザインツールです。"
   },
   {
     "id": 141,
     "name": "Galileo AI",
     "slug": "galileo-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "design",
     "tags": [
-      "ai-tool"
+      "ui",
+      "design"
     ],
     "free_plan": true,
-    "description": "Galileo AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "テキストからアプリUIデザインを生成できるAIデザインツールです。"
   },
   {
     "id": 142,
@@ -2022,10 +2022,10 @@
     "category": "design",
     "tags": [
       "design",
-      "ai"
+      "figma"
     ],
     "free_plan": true,
-    "description": "Magician AIはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "Figmaで利用できるAIデザイン支援ツールです。"
   },
   {
     "id": 143,
@@ -2034,2014 +2034,2051 @@
     "url": "",
     "category": "design",
     "tags": [
-      "design",
-      "branding",
-      "presentation"
+      "color",
+      "design"
     ],
     "free_plan": true,
-    "description": "Khromaはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "description": "AIを使ってカラーパレットを生成できるデザインツールです。"
   },
   {
     "id": 144,
     "name": "Autodraw",
     "slug": "autodraw",
     "url": "",
-    "category": "ai-tool",
+    "category": "design",
     "tags": [
-      "ai-tool"
+      "drawing",
+      "design"
     ],
     "free_plan": true,
-    "description": "AutodrawはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "手書きスケッチをAIが認識してイラストに変換する描画ツールです。"
   },
   {
     "id": 145,
     "name": "Vizcom",
     "slug": "vizcom",
     "url": "",
-    "category": "ai-tool",
+    "category": "design",
     "tags": [
-      "ai-tool"
+      "design",
+      "concept-art"
     ],
     "free_plan": true,
-    "description": "VizcomはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "スケッチからコンセプトアートを生成できるAIデザインツールです。"
   },
   {
     "id": 146,
     "name": "Spline AI",
     "slug": "spline-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "3d",
     "tags": [
-      "ai-tool"
+      "3d",
+      "design"
     ],
     "free_plan": true,
-    "description": "Spline AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使って3Dデザインやインタラクティブコンテンツを作成できるツールです。"
   },
   {
     "id": 147,
     "name": "Scenario AI",
     "slug": "scenario-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "game-assets"
     ],
     "free_plan": true,
-    "description": "Scenario AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "ゲーム用画像素材などを生成できるAI画像生成ツールです。"
   },
   {
     "id": 148,
     "name": "Meshy AI",
     "slug": "meshy-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "3d",
     "tags": [
-      "ai-tool"
+      "3d",
+      "generation"
     ],
     "free_plan": true,
-    "description": "Meshy AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使って3Dモデルを生成できる3D制作ツールです。"
   },
   {
     "id": 149,
     "name": "Kaedim",
     "slug": "kaedim",
     "url": "",
-    "category": "ai-tool",
+    "category": "3d",
     "tags": [
-      "ai-tool"
+      "3d",
+      "generation"
     ],
     "free_plan": true,
-    "description": "KaedimはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像やスケッチから3Dモデルを生成できるAIツールです。"
   },
   {
     "id": 150,
     "name": "Masterpiece Studio",
     "slug": "masterpiece-studio",
     "url": "",
-    "category": "audio",
+    "category": "3d",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "3d",
+      "modeling"
     ],
     "free_plan": true,
-    "description": "Masterpiece Studioは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "3Dキャラクターやアニメーション制作を支援するAIツールです。"
   },
   {
     "id": 151,
     "name": "Wonder Studio",
     "slug": "wonder-studio",
     "url": "",
-    "category": "audio",
+    "category": "video",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "video",
+      "vfx"
     ],
     "free_plan": true,
-    "description": "Wonder Studioは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "実写映像にAIキャラクターを合成できるVFX制作ツールです。"
   },
   {
     "id": 152,
     "name": "Move AI",
     "slug": "move-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "motion-capture",
+      "video"
     ],
     "free_plan": true,
-    "description": "Move AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使ってモーションキャプチャーデータを生成できるツールです。"
   },
   {
     "id": 153,
     "name": "Rokoko Vision",
     "slug": "rokoko-vision",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "motion-capture",
+      "3d"
     ],
     "free_plan": true,
-    "description": "Rokoko VisionはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "カメラ映像からモーションキャプチャーを生成できるAIツールです。"
   },
   {
     "id": 154,
     "name": "Cascadeur AI",
     "slug": "cascadeur-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "3d",
     "tags": [
-      "ai-tool"
+      "animation",
+      "3d"
     ],
     "free_plan": true,
-    "description": "Cascadeur AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI補助によるキャラクターアニメーション制作ツールです。"
   },
   {
     "id": 155,
     "name": "Animaker AI",
     "slug": "animaker-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "animation",
+      "video"
     ],
     "free_plan": true,
-    "description": "Animaker AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIでアニメーション動画を作成できる動画制作ツールです。"
   },
   {
     "id": 156,
     "name": "Steve AI",
     "slug": "steve-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "video",
+      "animation"
     ],
     "free_plan": true,
-    "description": "Steve AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "テキストからアニメーション動画を生成できるAI動画ツールです。"
   },
   {
     "id": 157,
     "name": "Fliki",
     "slug": "fliki",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "video",
+      "text-to-video"
     ],
     "free_plan": true,
-    "description": "FlikiはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "テキストからナレーション付き動画を生成できるAI動画制作ツールです。"
   },
   {
     "id": 158,
-    "name": "Lumen5",
-    "slug": "lumen5",
+    "name": "Colossyan",
+    "slug": "colossyan",
     "url": "",
     "category": "video",
     "tags": [
-      "video",
-      "video-generation",
-      "editing"
+      "avatar",
+      "video"
     ],
     "free_plan": true,
-    "description": "Lumen5はAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "AIアバターを使った説明動画を作成できる動画生成ツールです。"
   },
   {
     "id": 159,
-    "name": "InVideo AI",
-    "slug": "invideo-ai",
+    "name": "D-ID",
+    "slug": "d-id",
     "url": "",
     "category": "video",
     "tags": [
-      "video",
-      "ai"
+      "avatar",
+      "video"
     ],
     "free_plan": true,
-    "description": "InVideo AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "写真からAIアバター動画を生成できる動画生成サービスです。"
   },
   {
     "id": 160,
-    "name": "Vidyo AI",
-    "slug": "vidyo-ai",
+    "name": "Kaiber",
+    "slug": "kaiber",
     "url": "",
     "category": "video",
     "tags": [
       "video",
-      "ai"
+      "generation"
     ],
     "free_plan": true,
-    "description": "Vidyo AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "AIでミュージックビデオやアート動画を生成できる動画制作ツールです。"
   },
   {
     "id": 161,
-    "name": "Opus Clip",
-    "slug": "opus-clip",
+    "name": "Genmo",
+    "slug": "genmo",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "video",
+      "generation"
     ],
     "free_plan": true,
-    "description": "Opus ClipはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "テキストや画像から動画を生成できるAI動画生成ツールです。"
   },
   {
     "id": 162,
-    "name": "Kapwing AI",
-    "slug": "kapwing-ai",
+    "name": "Luma AI",
+    "slug": "luma-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "video",
     "tags": [
-      "ai-tool"
+      "video",
+      "3d"
     ],
     "free_plan": true,
-    "description": "Kapwing AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使って3D映像や動画コンテンツを生成できるツールです。"
   },
   {
     "id": 163,
-    "name": "Wisecut",
-    "slug": "wisecut",
+    "name": "Murf AI",
+    "slug": "murf-ai",
     "url": "",
-    "category": "video",
+    "category": "audio",
     "tags": [
-      "video",
-      "video-generation",
-      "editing"
+      "voice",
+      "tts"
     ],
     "free_plan": true,
-    "description": "WisecutはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "ナレーション音声を生成できるAI音声合成ツールです。"
   },
   {
     "id": 164,
-    "name": "Veed AI",
-    "slug": "veed-ai",
+    "name": "PlayHT",
+    "slug": "playht",
     "url": "",
-    "category": "video",
+    "category": "audio",
     "tags": [
-      "video",
-      "ai"
+      "voice",
+      "tts"
     ],
     "free_plan": true,
-    "description": "Veed AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "リアルなAI音声を生成できるテキスト読み上げツールです。"
   },
   {
     "id": 165,
-    "name": "Descript Video",
-    "slug": "descript-video",
-    "url": "https://www.descript.com",
-    "category": "video",
+    "name": "Voicemod AI",
+    "slug": "voicemod-ai",
+    "url": "",
+    "category": "audio",
     "tags": [
-      "video",
-      "editing",
-      "transcription",
-      "podcast"
+      "voice",
+      "audio"
     ],
     "free_plan": true,
-    "description": "Descriptの動画編集用途向け機能。文字ベースで動画や音声を編集したい人に向いています。"
+    "description": "AIによる音声変換やボイスエフェクトを利用できるツールです。"
   },
   {
     "id": 166,
-    "name": "Screen Studio",
-    "slug": "screen-studio",
+    "name": "Soundraw",
+    "slug": "soundraw",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "Screen Studioは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "AIで楽曲を生成できる音楽制作ツールです。"
   },
   {
     "id": 167,
-    "name": "Tactiq",
-    "slug": "tactiq",
+    "name": "AIVA",
+    "slug": "aiva",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "TactiqはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで作曲を行える音楽生成ツールです。"
   },
   {
     "id": 168,
-    "name": "MeetGeek",
-    "slug": "meetgeek",
+    "name": "Boomy",
+    "slug": "boomy",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "MeetGeekはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで楽曲制作を行える音楽生成サービスです。"
   },
   {
     "id": 169,
-    "name": "Sembly AI",
-    "slug": "sembly-ai",
+    "name": "Riffusion",
+    "slug": "riffusion",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "Sembly AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "リアルタイムで音楽を生成できるAI音楽生成ツールです。"
   },
   {
     "id": 170,
-    "name": "Avoma",
-    "slug": "avoma",
+    "name": "Soundful",
+    "slug": "soundful",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "AvomaはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使ってロイヤリティフリー音楽を生成できるツールです。"
   },
   {
     "id": 171,
-    "name": "People.ai",
-    "slug": "people-ai",
+    "name": "Beatoven",
+    "slug": "beatoven",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "music",
+      "generation"
     ],
     "free_plan": true,
-    "description": "People.aiはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "動画用のBGMをAIで生成できる音楽制作ツールです。"
   },
   {
     "id": 172,
-    "name": "Krisp AI",
-    "slug": "krisp-ai",
+    "name": "Endel",
+    "slug": "endel",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "sound",
+      "wellness"
     ],
     "free_plan": true,
-    "description": "Krisp AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIでリラックス音楽や集中用サウンドを生成できるサービスです。"
   },
   {
     "id": 173,
-    "name": "Cleanvoice AI",
-    "slug": "cleanvoice-ai",
+    "name": "Voice.ai",
+    "slug": "voice-ai",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
+      "voice",
       "ai"
     ],
     "free_plan": true,
-    "description": "Cleanvoice AIは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "AIによる音声変換や音声生成を行えるツールです。"
   },
   {
     "id": 174,
-    "name": "Adobe Podcast",
-    "slug": "adobe-podcast",
+    "name": "Resemble AI",
+    "slug": "resemble-ai",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
       "voice",
-      "music",
-      "podcast"
+      "tts"
     ],
     "free_plan": true,
-    "description": "Adobe Podcastは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "ボイスクローンや音声合成を行えるAI音声ツールです。"
   },
   {
     "id": 175,
-    "name": "Podcastle",
-    "slug": "podcastle",
+    "name": "Speechify",
+    "slug": "speechify",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
-      "voice",
-      "music",
-      "podcast"
+      "tts",
+      "reading"
     ],
     "free_plan": true,
-    "description": "Podcastleは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "文章をAI音声で読み上げるテキスト読み上げツールです。"
   },
   {
     "id": 176,
-    "name": "Riverside AI",
-    "slug": "riverside-ai",
+    "name": "WellSaid Labs",
+    "slug": "wellsaid-labs",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "voice",
+      "tts"
     ],
     "free_plan": true,
-    "description": "Riverside AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "高品質なAIナレーションを生成できる音声合成ツールです。"
   },
   {
     "id": 177,
-    "name": "Castmagic",
-    "slug": "castmagic",
+    "name": "LOVO AI",
+    "slug": "lovo-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "audio",
     "tags": [
-      "ai-tool"
+      "voice",
+      "tts"
     ],
     "free_plan": true,
-    "description": "CastmagicはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI音声生成やボイスクローンを行える音声制作ツールです。"
   },
   {
     "id": 178,
-    "name": "Podwise",
-    "slug": "podwise",
+    "name": "AssemblyAI",
+    "slug": "assemblyai",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "speech",
+      "api"
     ],
     "free_plan": true,
-    "description": "Podwiseは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "音声認識や音声解析を行える開発者向けAI APIサービスです。"
   },
   {
     "id": 179,
-    "name": "Podium AI",
-    "slug": "podium-ai",
+    "name": "Deepgram",
+    "slug": "deepgram",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
-      "ai"
+      "speech",
+      "api"
     ],
     "free_plan": true,
-    "description": "Podium AIは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "音声認識や音声解析を提供するAI音声APIサービスです。"
   },
   {
     "id": 180,
-    "name": "Audiopen",
-    "slug": "audiopen",
+    "name": "Whisper",
+    "slug": "whisper",
     "url": "",
     "category": "audio",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "speech",
+      "transcription"
     ],
     "free_plan": true,
-    "description": "Audiopenは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "音声をテキストに変換できるAI音声認識モデルです。"
   },
   {
     "id": 181,
-    "name": "Notta AI",
-    "slug": "notta-ai",
+    "name": "Otter AI",
+    "slug": "otter-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "notes",
+      "meeting"
     ],
     "free_plan": true,
-    "description": "Notta AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "会議内容をAIで文字起こし・要約できるツールです。"
   },
   {
     "id": 182,
-    "name": "Vatis Tech",
-    "slug": "vatis-tech",
+    "name": "Fireflies AI",
+    "slug": "fireflies-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "meeting",
+      "notes"
     ],
     "free_plan": true,
-    "description": "Vatis TechはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "オンライン会議の録音や文字起こしを行えるAIツールです。"
   },
   {
     "id": 183,
-    "name": "Speechmatics",
-    "slug": "speechmatics",
+    "name": "tl;dv",
+    "slug": "tldv",
     "url": "",
-    "category": "audio",
+    "category": "productivity",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "meeting",
+      "notes"
     ],
     "free_plan": true,
-    "description": "Speechmaticsは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "会議内容を録画し要約を生成できるAI会議ツールです。"
   },
   {
     "id": 184,
-    "name": "DeepL Write",
-    "slug": "deepl-write",
-    "url": "https://www.deepl.com/write",
-    "category": "writing",
+    "name": "Supernormal",
+    "slug": "supernormal",
+    "url": "",
+    "category": "productivity",
     "tags": [
-      "writing",
-      "rewrite",
-      "translation",
-      "editing"
+      "meeting",
+      "notes"
     ],
     "free_plan": true,
-    "description": "DeepLが提供する文章改善ツール。自然な表現への書き換えや英文の洗練に役立ちます。"
+    "description": "会議メモや要約を自動生成できるAI会議アシスタントです。"
   },
   {
     "id": 185,
-    "name": "LanguageTool AI",
-    "slug": "languagetool-ai",
+    "name": "Mem AI",
+    "slug": "mem-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "notes",
+      "knowledge"
     ],
     "free_plan": true,
-    "description": "LanguageTool AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIでメモ整理やナレッジ管理を行えるツールです。"
   },
   {
     "id": 186,
-    "name": "Wordtune",
-    "slug": "wordtune",
+    "name": "Taskade AI",
+    "slug": "taskade-ai",
     "url": "",
-    "category": "writing",
+    "category": "productivity",
     "tags": [
-      "writing",
-      "editing",
-      "copywriting"
+      "tasks",
+      "workflow"
     ],
     "free_plan": true,
-    "description": "Wordtuneは文章作成やリライトを支援するAIツールです。記事作成、校正、要約、コピー制作に向いています。"
+    "description": "タスク管理やワークフローをAIで支援するツールです。"
   },
   {
     "id": 187,
-    "name": "Text Blaze",
-    "slug": "text-blaze",
+    "name": "Rewind AI",
+    "slug": "rewind-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "memory",
+      "productivity"
     ],
     "free_plan": true,
-    "description": "Text BlazeはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "PC操作履歴をAIで検索できる記録ツールです。"
   },
   {
     "id": 188,
-    "name": "Compose AI",
-    "slug": "compose-ai",
+    "name": "Arc Max",
+    "slug": "arc-max",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "browser",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Compose AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI機能を統合したWebブラウザ拡張ツールです。"
   },
   {
     "id": 189,
-    "name": "Flowrite",
-    "slug": "flowrite",
-    "url": "",
-    "category": "writing",
+    "name": "Cursor",
+    "slug": "cursor",
+    "url": "https://www.cursor.com",
+    "category": "development",
     "tags": [
-      "writing",
-      "editing",
-      "copywriting"
+      "coding",
+      "ide"
     ],
     "free_plan": true,
-    "description": "Flowriteは文章作成やリライトを支援するAIツールです。記事作成、校正、要約、コピー制作に向いています。"
+    "description": "AIコーディング支援を統合した開発エディタです。"
   },
   {
     "id": 190,
-    "name": "Ellie AI",
-    "slug": "ellie-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Codeium",
+    "slug": "codeium",
+    "url": "https://codeium.com",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "autocomplete"
     ],
     "free_plan": true,
-    "description": "Ellie AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIコード補完や開発支援を行えるツールです。"
   },
   {
     "id": 191,
-    "name": "Reply.io AI",
-    "slug": "reply-io-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Tabnine",
+    "slug": "tabnine",
+    "url": "https://www.tabnine.com",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "autocomplete"
     ],
     "free_plan": true,
-    "description": "Reply.io AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIによるコード補完を提供する開発支援ツールです。"
   },
   {
     "id": 192,
-    "name": "Smartwriter",
-    "slug": "smartwriter",
-    "url": "",
-    "category": "image",
+    "name": "GitHub Copilot",
+    "slug": "github-copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "development",
     "tags": [
-      "image",
-      "image-generation",
-      "design"
+      "coding",
+      "github"
     ],
     "free_plan": true,
-    "description": "SmartwriterはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "GitHubが提供するAIコード生成・補完ツールです。"
   },
   {
     "id": 193,
-    "name": "Warmer AI",
-    "slug": "warmer-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Amazon CodeWhisperer",
+    "slug": "amazon-codewhisperer",
+    "url": "https://aws.amazon.com/q/developer/",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "aws"
     ],
     "free_plan": true,
-    "description": "Warmer AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AWS環境で利用できるAIコーディング支援ツールです。"
   },
   {
     "id": 194,
-    "name": "Coldreach AI",
-    "slug": "coldreach-ai",
+    "name": "Sourcegraph Cody",
+    "slug": "sourcegraph-cody",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "assistant"
     ],
     "free_plan": true,
-    "description": "Coldreach AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "コード検索やコード生成を支援するAI開発ツールです。"
   },
   {
     "id": 195,
-    "name": "Regie AI",
-    "slug": "regie-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Continue.dev",
+    "slug": "continue-dev",
+    "url": "https://www.continue.dev",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "assistant"
     ],
     "free_plan": true,
-    "description": "Regie AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "VS Codeで利用できるAIコーディング支援ツールです。"
   },
   {
     "id": 196,
-    "name": "Lavender AI",
-    "slug": "lavender-ai",
+    "name": "Replit Ghostwriter",
+    "slug": "replit-ghostwriter",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "assistant"
     ],
     "free_plan": true,
-    "description": "Lavender AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "Replit環境で利用できるAIコード生成ツールです。"
   },
   {
     "id": 197,
-    "name": "Clay AI",
-    "slug": "clay-ai",
+    "name": "Blackbox AI",
+    "slug": "blackbox-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "coding",
+      "search"
     ],
     "free_plan": true,
-    "description": "Clay AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "コード検索やコード生成を支援するAI開発ツールです。"
   },
   {
     "id": 198,
-    "name": "Humata AI",
-    "slug": "humata-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Phind",
+    "slug": "phind",
+    "url": "https://www.phind.com",
+    "category": "search",
     "tags": [
-      "ai-tool"
+      "search",
+      "developer"
     ],
     "free_plan": true,
-    "description": "Humata AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "開発者向けのAI検索エンジンです。"
   },
   {
     "id": 199,
-    "name": "ChatPDF",
-    "slug": "chatpdf",
+    "name": "You.com",
+    "slug": "you-com",
     "url": "",
-    "category": "chatbot",
+    "category": "search",
     "tags": [
-      "chatbot",
-      "text",
-      "assistant"
+      "search",
+      "ai"
     ],
     "free_plan": true,
-    "description": "ChatPDFは対話型のAIアシスタントです。文章生成、要約、質問回答、発想支援など幅広い用途に使えます。"
+    "description": "AIによる検索結果整理と回答生成を行う検索エンジンです。"
   },
   {
     "id": 200,
-    "name": "AskYourPDF",
-    "slug": "askyourpdf",
+    "name": "Andi Search",
+    "slug": "andi-search",
     "url": "",
     "category": "search",
     "tags": [
       "search",
-      "research",
-      "answers"
+      "ai"
     ],
     "free_plan": true,
-    "description": "AskYourPDFはAI検索エンジンです。Web情報をAIが整理して回答し、リサーチや情報収集を効率化できます。"
+    "description": "AIが検索結果を整理して回答するAI検索エンジンです。"
   },
   {
     "id": 201,
-    "name": "PDF AI",
-    "slug": "pdf-ai",
+    "name": "Glean AI",
+    "slug": "glean-ai",
     "url": "",
-    "category": "search",
+    "category": "productivity",
     "tags": [
       "search",
-      "research",
-      "answers"
+      "workspace"
     ],
     "free_plan": true,
-    "description": "PDF AIは検索・調査を支援するAIツールです。情報収集や出典確認を効率化したい場面で便利です。"
+    "description": "社内データを横断検索できるAIナレッジ検索ツールです。"
   },
   {
     "id": 202,
-    "name": "Documind",
-    "slug": "documind",
+    "name": "Humata AI",
+    "slug": "humata-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "pdf",
+      "analysis"
     ],
     "free_plan": true,
-    "description": "DocumindはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "PDFなどのドキュメント内容をAIで分析・質問できるツールです。"
   },
   {
     "id": 203,
-    "name": "FileGPT",
-    "slug": "filegpt",
+    "name": "ChatPDF",
+    "slug": "chatpdf",
     "url": "",
-    "category": "chatbot",
+    "category": "productivity",
     "tags": [
-      "chatbot",
-      "text",
-      "assistant"
+      "pdf",
+      "chat"
     ],
     "free_plan": true,
-    "description": "FileGPTはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
+    "description": "PDFを読み込みAIと対話形式で内容を確認できるツールです。"
   },
   {
     "id": 204,
-    "name": "Unriddle AI",
-    "slug": "unriddle-ai",
+    "name": "AskYourPDF",
+    "slug": "askyourpdf",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "pdf",
+      "chat"
     ],
     "free_plan": true,
-    "description": "Unriddle AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "PDFファイルをAIで分析して質問できるツールです。"
   },
   {
     "id": 205,
-    "name": "Genei",
-    "slug": "genei",
+    "name": "PDF AI",
+    "slug": "pdf-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "productivity",
     "tags": [
-      "ai-tool"
+      "pdf",
+      "ai"
     ],
     "free_plan": true,
-    "description": "GeneiはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "PDF文書の内容をAIで解析できるツールです。"
   },
   {
     "id": 206,
     "name": "Scholarcy",
     "slug": "scholarcy",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "summary"
     ],
     "free_plan": true,
-    "description": "ScholarcyはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文や研究資料をAIで要約できるツールです。"
   },
   {
     "id": 207,
-    "name": "Explainlikeimfive AI",
-    "slug": "explainlikeimfive-ai",
+    "name": "Scite AI",
+    "slug": "scite-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "papers"
     ],
     "free_plan": true,
-    "description": "Explainlikeimfive AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "研究論文の引用関係を分析できるAI研究支援ツールです。"
   },
   {
     "id": 208,
-    "name": "Wolfram Alpha AI",
-    "slug": "wolfram-alpha-ai",
+    "name": "Elicit",
+    "slug": "elicit",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "papers"
     ],
     "free_plan": true,
-    "description": "Wolfram Alpha AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "研究論文の検索や分析をAIで行えるツールです。"
   },
   {
     "id": 209,
-    "name": "Polymath AI",
-    "slug": "polymath-ai",
+    "name": "Consensus",
+    "slug": "consensus",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "search"
     ],
     "free_plan": true,
-    "description": "Polymath AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文データをAIで検索できる研究向け検索エンジンです。"
   },
   {
     "id": 210,
-    "name": "Mathly AI",
-    "slug": "mathly-ai",
+    "name": "Research Rabbit",
+    "slug": "research-rabbit",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "papers"
     ],
     "free_plan": true,
-    "description": "Mathly AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文の関連関係を可視化できる研究支援ツールです。"
   },
   {
     "id": 211,
-    "name": "Tutor AI",
-    "slug": "tutor-ai",
+    "name": "Semantic Scholar AI",
+    "slug": "semantic-scholar-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "papers"
     ],
     "free_plan": true,
-    "description": "Tutor AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを利用した学術論文検索サービスです。"
   },
   {
     "id": 212,
-    "name": "Socratic AI",
-    "slug": "socratic-ai",
+    "name": "Explainpaper",
+    "slug": "explainpaper",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "papers",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Socratic AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文の内容をAIが分かりやすく解説するツールです。"
   },
   {
     "id": 213,
-    "name": "Quizgecko",
-    "slug": "quizgecko",
+    "name": "Paperpile AI",
+    "slug": "paperpile-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "papers",
+      "reference"
     ],
     "free_plan": true,
-    "description": "QuizgeckoはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文管理とAI分析を行える研究支援ツールです。"
   },
   {
     "id": 214,
-    "name": "Studyable",
-    "slug": "studyable",
+    "name": "Connected Papers",
+    "slug": "connected-papers",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "visualization"
     ],
     "free_plan": true,
-    "description": "StudyableはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "論文の関連ネットワークを可視化する研究ツールです。"
   },
   {
     "id": 215,
-    "name": "Exam AI",
-    "slug": "exam-ai",
+    "name": "Litmaps",
+    "slug": "litmaps",
     "url": "",
-    "category": "ai-tool",
+    "category": "research",
     "tags": [
-      "ai-tool"
+      "research",
+      "papers"
     ],
     "free_plan": true,
-    "description": "Exam AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "研究論文の関連性をマップ表示できるツールです。"
   },
   {
     "id": 216,
-    "name": "LearnGPT",
-    "slug": "learngpt",
+    "name": "Mindgrasp",
+    "slug": "mindgrasp",
     "url": "",
-    "category": "chatbot",
+    "category": "productivity",
     "tags": [
-      "chatbot",
-      "text",
-      "assistant"
+      "learning",
+      "summary"
     ],
     "free_plan": true,
-    "description": "LearnGPTはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
+    "description": "講義や動画の内容をAIで要約できる学習支援ツールです。"
   },
   {
     "id": 217,
-    "name": "Duolingo Max",
-    "slug": "duolingo-max",
+    "name": "Studyable",
+    "slug": "studyable",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "study",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Duolingo MaxはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで学習をサポートする教育支援ツールです。"
   },
   {
     "id": 218,
-    "name": "Elsa Speak",
-    "slug": "elsa-speak",
+    "name": "Tutor AI",
+    "slug": "tutor-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "learning",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Elsa SpeakはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使って学習サポートを行う教育ツールです。"
   },
   {
     "id": 219,
-    "name": "Speak AI",
-    "slug": "speak-ai",
+    "name": "Socratic AI",
+    "slug": "socratic-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "learning",
+      "study"
     ],
     "free_plan": true,
-    "description": "Speak AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで問題解説を行う学習支援ツールです。"
   },
   {
     "id": 220,
-    "name": "Lingvist AI",
-    "slug": "lingvist-ai",
+    "name": "Quizgecko",
+    "slug": "quizgecko",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "quiz",
+      "learning"
     ],
     "free_plan": true,
-    "description": "Lingvist AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIでクイズやテスト問題を生成できるツールです。"
   },
   {
     "id": 221,
-    "name": "Reface AI",
-    "slug": "reface-ai",
+    "name": "Question AI",
+    "slug": "question-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "learning",
+      "questions"
     ],
     "free_plan": true,
-    "description": "Reface AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで質問回答を行う学習支援ツールです。"
   },
   {
     "id": 222,
-    "name": "DeepSwap",
-    "slug": "deepswap",
+    "name": "Exam AI",
+    "slug": "exam-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "education",
     "tags": [
-      "ai-tool"
+      "study",
+      "ai"
     ],
     "free_plan": true,
-    "description": "DeepSwapはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで試験対策をサポートする学習ツールです。"
   },
   {
     "id": 223,
-    "name": "Swapface",
-    "slug": "swapface",
-    "url": "",
-    "category": "ai-tool",
+    "name": "DeepL Write",
+    "slug": "deepl-write",
+    "url": "https://www.deepl.com/write",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "translation"
     ],
     "free_plan": true,
-    "description": "SwapfaceはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "文章改善や翻訳補助を行えるAI文章ツールです。"
   },
   {
     "id": 224,
-    "name": "FaceMagic",
-    "slug": "facemagic",
-    "url": "",
-    "category": "ai-tool",
+    "name": "DeepL Translator",
+    "slug": "deepl-translator",
+    "url": "https://www.deepl.com/translator",
+    "category": "translation",
     "tags": [
-      "ai-tool"
+      "translation",
+      "ai"
     ],
     "free_plan": true,
-    "description": "FaceMagicはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "高精度なAI翻訳を行える翻訳ツールです。"
   },
   {
     "id": 225,
-    "name": "FakeYou",
-    "slug": "fakeyou",
+    "name": "Google Translate AI",
+    "slug": "google-translate-ai",
     "url": "",
-    "category": "search",
+    "category": "translation",
     "tags": [
-      "search",
-      "research",
-      "answers"
+      "translation",
+      "ai"
     ],
     "free_plan": true,
-    "description": "FakeYouはAI検索エンジンです。Web情報をAIが整理して回答し、リサーチや情報収集を効率化できます。"
+    "description": "AI翻訳機能を利用できる翻訳サービスです。"
   },
   {
     "id": 226,
-    "name": "Uberduck",
-    "slug": "uberduck",
+    "name": "Papago AI",
+    "slug": "papago-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "translation",
     "tags": [
-      "ai-tool"
+      "translation",
+      "ai"
     ],
     "free_plan": true,
-    "description": "UberduckはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "多言語翻訳を行えるAI翻訳ツールです。"
   },
   {
     "id": 227,
-    "name": "Voice.ai Studio",
-    "slug": "voice-ai-studio",
+    "name": "Lingva",
+    "slug": "lingva",
     "url": "",
-    "category": "audio",
+    "category": "translation",
     "tags": [
-      "audio",
+      "translation",
       "ai"
     ],
     "free_plan": true,
-    "description": "Voice.ai Studioは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "AI翻訳機能を利用できる翻訳サービスです。"
   },
   {
     "id": 228,
-    "name": "Synthesys",
-    "slug": "synthesys",
+    "name": "Wordtune",
+    "slug": "wordtune",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "editing"
     ],
     "free_plan": true,
-    "description": "SynthesysはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "文章の言い換えや改善を行えるAIライティングツールです。"
   },
   {
     "id": 229,
-    "name": "Altered AI",
-    "slug": "altered-ai",
+    "name": "Compose AI",
+    "slug": "compose-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "autocomplete"
     ],
     "free_plan": true,
-    "description": "Altered AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIによる文章補完を行えるライティングツールです。"
   },
   {
     "id": 230,
-    "name": "Voiceflow",
-    "slug": "voiceflow",
+    "name": "HyperWrite",
+    "slug": "hyperwrite",
     "url": "",
-    "category": "audio",
+    "category": "writing",
     "tags": [
-      "audio",
-      "voice",
-      "music"
+      "writing",
+      "assistant"
     ],
     "free_plan": true,
-    "description": "Voiceflowは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
+    "description": "AIで文章作成を支援するライティングツールです。"
   },
   {
     "id": 231,
-    "name": "Botpress AI",
-    "slug": "botpress-ai",
+    "name": "WordHero",
+    "slug": "wordhero",
     "url": "",
-    "category": "ai-tool",
+    "category": "writing",
     "tags": [
-      "ai-tool"
+      "writing",
+      "copywriting"
     ],
     "free_plan": true,
-    "description": "Botpress AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "マーケティング文章を生成できるAIライティングツールです。"
   },
   {
     "id": 232,
-    "name": "Manychat AI",
-    "slug": "manychat-ai",
+    "name": "Peppertype AI",
+    "slug": "peppertype-ai",
     "url": "",
-    "category": "chatbot",
+    "category": "writing",
     "tags": [
-      "chatbot",
-      "text",
-      "assistant"
+      "writing",
+      "marketing"
     ],
     "free_plan": true,
-    "description": "Manychat AIは対話型のAIアシスタントです。文章生成、要約、質問回答、発想支援など幅広い用途に使えます。"
+    "description": "コンテンツ制作を支援するAIライティングツールです。"
   },
   {
     "id": 233,
-    "name": "Chatfuel AI",
-    "slug": "chatfuel-ai",
+    "name": "Simplified AI",
+    "slug": "simplified-ai",
     "url": "",
-    "category": "chatbot",
+    "category": "design",
     "tags": [
-      "chatbot",
-      "text",
-      "assistant"
+      "design",
+      "content"
     ],
     "free_plan": true,
-    "description": "Chatfuel AIは対話型のAIアシスタントです。文章生成、要約、質問回答、発想支援など幅広い用途に使えます。"
+    "description": "デザイン制作やコンテンツ生成を行えるAIツールです。"
   },
   {
     "id": 234,
-    "name": "Landbot AI",
-    "slug": "landbot-ai",
+    "name": "Designs AI",
+    "slug": "designs-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "design",
     "tags": [
-      "ai-tool"
+      "design",
+      "branding"
     ],
     "free_plan": true,
-    "description": "Landbot AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "ロゴや動画などを生成できるAIデザインツールです。"
   },
   {
     "id": 235,
-    "name": "Tidio AI",
-    "slug": "tidio-ai",
+    "name": "Looka AI",
+    "slug": "looka-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "design",
     "tags": [
-      "ai-tool"
+      "logo",
+      "branding"
     ],
     "free_plan": true,
-    "description": "Tidio AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIを使ってロゴを生成できるデザインツールです。"
   },
   {
     "id": 236,
-    "name": "Drift AI",
-    "slug": "drift-ai",
-    "url": "",
-    "category": "ai-tool",
+    "name": "Remove.bg",
+    "slug": "remove-bg",
+    "url": "https://www.remove.bg",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "editing"
     ],
     "free_plan": true,
-    "description": "Drift AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像の背景を自動で削除できるAI画像編集ツールです。"
   },
   {
     "id": 237,
-    "name": "Intercom AI",
-    "slug": "intercom-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Intercom AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 238,
-    "name": "Ada AI",
-    "slug": "ada-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Ada AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 239,
-    "name": "Fin AI",
-    "slug": "fin-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Fin AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 240,
-    "name": "Cognigy",
-    "slug": "cognigy",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "CognigyはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 241,
-    "name": "Hugging Face",
-    "slug": "hugging-face",
-    "url": "https://huggingface.co",
-    "category": "development",
-    "tags": [
-      "models",
-      "development",
-      "open-source",
-      "ml"
-    ],
-    "free_plan": true,
-    "description": "機械学習モデルやデータセットを共有・利用できる代表的なプラットフォーム。生成AI開発者にも定番です。"
-  },
-  {
-    "id": 242,
-    "name": "Replicate",
-    "slug": "replicate",
-    "url": "https://replicate.com",
-    "category": "development",
-    "tags": [
-      "models",
-      "api",
-      "deployment"
-    ],
-    "free_plan": true,
-    "description": "各種AIモデルをAPI経由で試したり組み込んだりできるプラットフォームです。"
-  },
-  {
-    "id": 243,
-    "name": "Modal AI",
-    "slug": "modal-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Modal AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 244,
-    "name": "OctoAI",
-    "slug": "octoai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "OctoAIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 245,
-    "name": "Together AI",
-    "slug": "together-ai",
-    "url": "https://www.together.ai",
-    "category": "development",
-    "tags": [
-      "models",
-      "api",
-      "inference"
-    ],
-    "free_plan": true,
-    "description": "オープンモデルの推論やAPI利用を行いやすい生成AIプラットフォームです。"
-  },
-  {
-    "id": 246,
-    "name": "Anyscale",
-    "slug": "anyscale",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "AnyscaleはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 247,
-    "name": "Weights & Biases",
-    "slug": "weights-biases",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Weights & BiasesはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 248,
-    "name": "LangChain",
-    "slug": "langchain",
-    "url": "https://www.langchain.com",
-    "category": "development",
-    "tags": [
-      "development",
-      "framework",
-      "llm",
-      "agents"
-    ],
-    "free_plan": true,
-    "description": "LLMアプリやAIエージェント構築で広く使われるフレームワーク群。ツール連携やワークフロー設計に向いています。"
-  },
-  {
-    "id": 249,
-    "name": "LlamaIndex",
-    "slug": "llamaindex",
-    "url": "https://www.llamaindex.ai",
-    "category": "development",
-    "tags": [
-      "development",
-      "rag",
-      "data",
-      "framework"
-    ],
-    "free_plan": true,
-    "description": "外部データをLLMに接続するRAG構築でよく使われるフレームワーク。文書検索系の実装にも向きます。"
-  },
-  {
-    "id": 250,
-    "name": "Haystack AI",
-    "slug": "haystack-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Haystack AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 251,
-    "name": "AutoGPT",
-    "slug": "autogpt",
-    "url": "https://github.com/Significant-Gravitas/AutoGPT",
-    "category": "agent",
-    "tags": [
-      "agent",
-      "automation",
-      "open-source"
-    ],
-    "free_plan": true,
-    "description": "自律型AIエージェントの代表例として知られるオープンソースプロジェクト。タスク自動化の実験用途で人気があります。"
-  },
-  {
-    "id": 252,
-    "name": "BabyAGI",
-    "slug": "babyagi",
-    "url": "https://github.com/yoheinakajima/babyagi",
-    "category": "agent",
-    "tags": [
-      "agent",
-      "automation",
-      "open-source"
-    ],
-    "free_plan": true,
-    "description": "AIエージェントの初期代表例として知られるプロジェクト。自律タスク管理の発想で広く参照されました。"
-  },
-  {
-    "id": 253,
-    "name": "AgentGPT",
-    "slug": "agentgpt",
-    "url": "https://agentgpt.reworkd.ai",
-    "category": "agent",
-    "tags": [
-      "agent",
-      "automation",
-      "web"
-    ],
-    "free_plan": true,
-    "description": "AgentGPTはタスク実行や自動化を支援するAIエージェント系ツールです。ワークフロー化や実験用途で使われます。"
-  },
-  {
-    "id": 254,
-    "name": "SuperAGI",
-    "slug": "superagi",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "SuperAGIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 255,
-    "name": "CrewAI",
-    "slug": "crewai",
-    "url": "https://www.crewai.com",
-    "category": "agent",
-    "tags": [
-      "agent",
-      "workflow",
-      "multi-agent"
-    ],
-    "free_plan": true,
-    "description": "複数エージェントの役割分担を設計しやすいフレームワーク。自動化ワークフロー構築に使われます。"
-  },
-  {
-    "id": 256,
-    "name": "OpenInterpreter",
-    "slug": "openinterpreter",
-    "url": "",
-    "category": "agent",
-    "tags": [
-      "agent",
-      "automation"
-    ],
-    "free_plan": true,
-    "description": "OpenInterpreterはタスク実行や自動化を支援するAIエージェント系ツールです。ワークフロー化や実験用途で使われます。"
-  },
-  {
-    "id": 257,
-    "name": "GPT Engineer",
-    "slug": "gpt-engineer",
-    "url": "",
-    "category": "chatbot",
-    "tags": [
-      "chatbot",
-      "text",
-      "assistant"
-    ],
-    "free_plan": true,
-    "description": "GPT EngineerはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
-  },
-  {
-    "id": 258,
-    "name": "Smol Developer",
-    "slug": "smol-developer",
-    "url": "",
-    "category": "development",
-    "tags": [
-      "development",
-      "coding",
-      "assistant"
-    ],
-    "free_plan": true,
-    "description": "Smol Developerは開発者向けのAIツールです。コード生成、補完、調査、実装支援などに利用できます。"
-  },
-  {
-    "id": 259,
-    "name": "Devin AI",
-    "slug": "devin-ai",
-    "url": "",
-    "category": "development",
-    "tags": [
-      "development",
-      "ai"
-    ],
-    "free_plan": true,
-    "description": "Devin AIは開発者向けのAIツールです。コード生成、補完、調査、実装支援などに利用できます。"
-  },
-  {
-    "id": 260,
-    "name": "Devika AI",
-    "slug": "devika-ai",
-    "url": "",
-    "category": "development",
-    "tags": [
-      "development",
-      "ai"
-    ],
-    "free_plan": true,
-    "description": "Devika AIは開発者向けのAIツールです。コード生成、補完、調査、実装支援などに利用できます。"
-  },
-  {
-    "id": 261,
-    "name": "Krea AI",
-    "slug": "krea-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Krea AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 262,
-    "name": "Recraft AI",
-    "slug": "recraft-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Recraft AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 263,
-    "name": "ClipGen",
-    "slug": "clipgen",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "ClipGenはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 264,
-    "name": "ImageFX",
-    "slug": "imagefx",
+    "name": "Cleanup Pictures",
+    "slug": "cleanup-pictures",
     "url": "",
     "category": "image",
     "tags": [
       "image",
-      "image-generation",
-      "design"
-    ],
-    "free_plan": true,
-    "description": "ImageFXはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
-  },
-  {
-    "id": 265,
-    "name": "MusicFX",
-    "slug": "musicfx",
-    "url": "",
-    "category": "audio",
-    "tags": [
-      "audio",
-      "voice",
-      "music"
-    ],
-    "free_plan": true,
-    "description": "MusicFXは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
-  },
-  {
-    "id": 266,
-    "name": "VideoFX",
-    "slug": "videofx",
-    "url": "",
-    "category": "video",
-    "tags": [
-      "video",
-      "video-generation",
       "editing"
     ],
     "free_plan": true,
-    "description": "VideoFXはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "画像の不要な部分をAIで除去できる画像編集ツールです。"
   },
   {
-    "id": 267,
-    "name": "AnimateDiff",
-    "slug": "animatediff",
+    "id": 238,
+    "name": "Upscale Media",
+    "slug": "upscale-media",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "upscale"
     ],
     "free_plan": true,
-    "description": "AnimateDiffはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "画像をAIで高解像度化できるアップスケールツールです。"
   },
   {
-    "id": 268,
-    "name": "CogVideo",
-    "slug": "cogvideo",
+    "id": 239,
+    "name": "PhotoRoom AI",
+    "slug": "photoroom-ai",
     "url": "",
-    "category": "video",
+    "category": "image",
     "tags": [
-      "video",
-      "video-generation",
+      "image",
       "editing"
     ],
     "free_plan": true,
-    "description": "CogVideoはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "商品写真などをAIで編集できる画像ツールです。"
   },
   {
-    "id": 269,
-    "name": "Gen-2",
-    "slug": "gen-2",
+    "id": 240,
+    "name": "ImgUpscaler",
+    "slug": "imgupscaler",
     "url": "",
-    "category": "ai-tool",
+    "category": "image",
     "tags": [
-      "ai-tool"
+      "image",
+      "upscale"
     ],
     "free_plan": true,
-    "description": "Gen-2はAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIで画像解像度を上げるアップスケールツールです。"
   },
   {
-    "id": 270,
-    "name": "Runway Gen-3",
-    "slug": "runway-gen-3",
-    "url": "https://runwayml.com",
-    "category": "video",
-    "tags": [
-      "video",
-      "video-generation",
-      "editing",
-      "creator"
-    ],
-    "free_plan": false,
-    "description": "Runwayの動画生成モデル群の1つ。テキストや画像から映像制作を行いたいクリエイター向けです。"
-  },
-  {
-    "id": 271,
-    "name": "Sora",
-    "slug": "sora",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "SoraはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 272,
-    "name": "Pika 1.0",
-    "slug": "pika-1-0",
-    "url": "",
-    "category": "video",
-    "tags": [
-      "video",
-      "video-generation",
-      "editing"
-    ],
-    "free_plan": true,
-    "description": "Pika 1.0はAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
-  },
-  {
-    "id": 273,
-    "name": "Dream Machine",
-    "slug": "dream-machine",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Dream MachineはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 274,
-    "name": "LTX Studio",
-    "slug": "ltx-studio",
-    "url": "",
-    "category": "audio",
-    "tags": [
-      "audio",
-      "voice",
-      "music"
-    ],
-    "free_plan": true,
-    "description": "LTX Studioは音声・音楽関連のAIツールです。読み上げ、音声編集、楽曲生成などに活用できます。"
-  },
-  {
-    "id": 275,
-    "name": "Storyboarder AI",
-    "slug": "storyboarder-ai",
-    "url": "",
-    "category": "ai-tool",
-    "tags": [
-      "ai-tool"
-    ],
-    "free_plan": true,
-    "description": "Storyboarder AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
-  },
-  {
-    "id": 276,
-    "name": "Filmora AI",
-    "slug": "filmora-ai",
-    "url": "",
-    "category": "video",
-    "tags": [
-      "video",
-      "ai"
-    ],
-    "free_plan": true,
-    "description": "Filmora AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
-  },
-  {
-    "id": 277,
+    "id": 241,
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "url": "",
     "category": "video",
     "tags": [
       "video",
+      "editing"
+    ],
+    "free_plan": true,
+    "description": "AI動画編集機能を備えた動画制作ツールです。"
+  },
+  {
+    "id": 242,
+    "name": "VEED AI",
+    "slug": "veed-ai",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "video",
+      "editing"
+    ],
+    "free_plan": true,
+    "description": "AI字幕生成などを行える動画編集ツールです。"
+  },
+  {
+    "id": 243,
+    "name": "Kapwing AI",
+    "slug": "kapwing-ai",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "video",
+      "editing"
+    ],
+    "free_plan": true,
+    "description": "AI機能を利用した動画編集ツールです。"
+  },
+  {
+    "id": 244,
+    "name": "Opus Clip",
+    "slug": "opus-clip",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "video",
+      "social"
+    ],
+    "free_plan": true,
+    "description": "長い動画からSNS用クリップを生成できるAIツールです。"
+  },
+  {
+    "id": 245,
+    "name": "Vizard AI",
+    "slug": "vizard-ai",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "video",
+      "editing"
+    ],
+    "free_plan": true,
+    "description": "動画コンテンツをAIで編集できるツールです。"
+  },
+  {
+    "id": 246,
+    "name": "Submagic",
+    "slug": "submagic",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "subtitles",
+      "video"
+    ],
+    "free_plan": true,
+    "description": "AIで字幕を生成できる動画ツールです。"
+  },
+  {
+    "id": 247,
+    "name": "AutoSub AI",
+    "slug": "autosub-ai",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "subtitles",
+      "video"
+    ],
+    "free_plan": true,
+    "description": "AIで動画字幕を作成できるツールです。"
+  },
+  {
+    "id": 248,
+    "name": "Dubverse",
+    "slug": "dubverse",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "voice",
+      "video"
+    ],
+    "free_plan": true,
+    "description": "動画のAI音声吹き替えを行えるツールです。"
+  },
+  {
+    "id": 249,
+    "name": "Papercup",
+    "slug": "papercup",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "voice",
+      "video"
+    ],
+    "free_plan": true,
+    "description": "AI音声で動画の吹き替えを生成できるツールです。"
+  },
+  {
+    "id": 250,
+    "name": "Translate.Video",
+    "slug": "translate-video",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "translation",
+      "video"
+    ],
+    "free_plan": true,
+    "description": "動画の翻訳や字幕生成を行えるAIツールです。"
+  },
+  {
+    "id": 251,
+    "name": "Krisp AI",
+    "slug": "krisp-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "noise",
+      "audio"
+    ],
+    "free_plan": true,
+    "description": "AIでノイズ除去を行える音声ツールです。"
+  },
+  {
+    "id": 252,
+    "name": "Adobe Podcast AI",
+    "slug": "adobe-podcast-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "podcast",
+      "audio"
+    ],
+    "free_plan": true,
+    "description": "AIで音声を高品質化できるポッドキャスト編集ツールです。"
+  },
+  {
+    "id": 253,
+    "name": "Podcastle",
+    "slug": "podcastle",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "podcast",
+      "audio"
+    ],
+    "free_plan": true,
+    "description": "AIでポッドキャスト制作を行えるツールです。"
+  },
+  {
+    "id": 254,
+    "name": "Cleanvoice AI",
+    "slug": "cleanvoice-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "audio",
+      "editing"
+    ],
+    "free_plan": true,
+    "description": "音声からノイズや不要部分を除去できるAIツールです。"
+  },
+  {
+    "id": 255,
+    "name": "Altered AI",
+    "slug": "altered-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
       "ai"
     ],
     "free_plan": true,
-    "description": "CapCut AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "音声変換やボイス生成を行えるAIツールです。"
+  },
+  {
+    "id": 256,
+    "name": "Synthesys",
+    "slug": "synthesys",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
+      "tts"
+    ],
+    "free_plan": true,
+    "description": "AIナレーション生成を行える音声ツールです。"
+  },
+  {
+    "id": 257,
+    "name": "Genny AI",
+    "slug": "genny-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
+      "tts"
+    ],
+    "free_plan": true,
+    "description": "AI音声生成を行えるツールです。"
+  },
+  {
+    "id": 258,
+    "name": "Listnr AI",
+    "slug": "listnr-ai",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
+      "tts"
+    ],
+    "free_plan": true,
+    "description": "AI音声生成やポッドキャスト制作ができるツールです。"
+  },
+  {
+    "id": 259,
+    "name": "Voicemaker",
+    "slug": "voicemaker",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
+      "tts"
+    ],
+    "free_plan": true,
+    "description": "テキスト読み上げを行えるAI音声ツールです。"
+  },
+  {
+    "id": 260,
+    "name": "SpeechGen",
+    "slug": "speechgen",
+    "url": "",
+    "category": "audio",
+    "tags": [
+      "voice",
+      "tts"
+    ],
+    "free_plan": true,
+    "description": "AI音声合成を行えるツールです。"
+  },
+  {
+    "id": 261,
+    "name": "HuggingChat",
+    "slug": "huggingchat",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "chatbot",
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "オープンモデルを利用したAIチャットサービスです。"
+  },
+  {
+    "id": 262,
+    "name": "Open Assistant",
+    "slug": "open-assistant",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "chatbot",
+      "open-source"
+    ],
+    "free_plan": true,
+    "description": "オープンソースのAIチャットプロジェクトです。"
+  },
+  {
+    "id": 263,
+    "name": "Jan AI",
+    "slug": "jan-ai",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "chatbot",
+      "local-ai"
+    ],
+    "free_plan": true,
+    "description": "ローカル環境でAIチャットを利用できるツールです。"
+  },
+  {
+    "id": 264,
+    "name": "LM Studio",
+    "slug": "lm-studio",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "local"
+    ],
+    "free_plan": true,
+    "description": "ローカルでLLMモデルを実行できるツールです。"
+  },
+  {
+    "id": 265,
+    "name": "Ollama",
+    "slug": "ollama",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "local"
+    ],
+    "free_plan": true,
+    "description": "ローカルでAIモデルを実行できるLLMツールです。"
+  },
+  {
+    "id": 266,
+    "name": "GPT4All",
+    "slug": "gpt4all",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "local"
+    ],
+    "free_plan": true,
+    "description": "ローカル環境でLLMを実行できるAIツールです。"
+  },
+  {
+    "id": 267,
+    "name": "LangChain",
+    "slug": "langchain",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "framework"
+    ],
+    "free_plan": true,
+    "description": "LLMアプリ開発を支援するフレームワークです。"
+  },
+  {
+    "id": 268,
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "framework"
+    ],
+    "free_plan": true,
+    "description": "AIデータ検索システムを構築できるフレームワークです。"
+  },
+  {
+    "id": 269,
+    "name": "Flowise",
+    "slug": "flowise",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "workflow"
+    ],
+    "free_plan": true,
+    "description": "ノーコードでAIワークフローを作成できるツールです。"
+  },
+  {
+    "id": 270,
+    "name": "Dust AI",
+    "slug": "dust-ai",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "llm",
+      "apps"
+    ],
+    "free_plan": true,
+    "description": "AIアプリを構築できる開発ツールです。"
+  },
+  {
+    "id": 271,
+    "name": "Retool AI",
+    "slug": "retool-ai",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "apps",
+      "development"
+    ],
+    "free_plan": true,
+    "description": "AI機能を統合したアプリ開発ツールです。"
+  },
+  {
+    "id": 272,
+    "name": "Peltarion",
+    "slug": "peltarion",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "ml",
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AIモデル開発を行える機械学習ツールです。"
+  },
+  {
+    "id": 273,
+    "name": "RunPod",
+    "slug": "runpod",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "gpu",
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AIモデル実行用のGPUクラウドサービスです。"
+  },
+  {
+    "id": 274,
+    "name": "Paperspace",
+    "slug": "paperspace",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "gpu",
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AI開発用クラウドGPUサービスです。"
+  },
+  {
+    "id": 275,
+    "name": "Lightning AI",
+    "slug": "lightning-ai",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "ml",
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AI開発や機械学習モデル実行を行えるツールです。"
+  },
+  {
+    "id": 276,
+    "name": "Weights & Biases",
+    "slug": "weights-biases",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "ml",
+      "tracking"
+    ],
+    "free_plan": true,
+    "description": "機械学習実験の管理を行えるAI開発ツールです。"
+  },
+  {
+    "id": 277,
+    "name": "Neptune AI",
+    "slug": "neptune-ai",
+    "url": "",
+    "category": "development",
+    "tags": [
+      "ml",
+      "tracking"
+    ],
+    "free_plan": true,
+    "description": "機械学習実験を管理できるAI開発ツールです。"
   },
   {
     "id": 278,
-    "name": "Premiere Pro AI",
-    "slug": "premiere-pro-ai",
+    "name": "MLflow",
+    "slug": "mlflow",
     "url": "",
-    "category": "video",
+    "category": "development",
     "tags": [
-      "video",
-      "ai"
+      "ml",
+      "framework"
     ],
     "free_plan": true,
-    "description": "Premiere Pro AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "機械学習モデル管理を行えるツールです。"
   },
   {
     "id": 279,
-    "name": "After Effects AI",
-    "slug": "after-effects-ai",
+    "name": "Labelbox",
+    "slug": "labelbox",
     "url": "",
-    "category": "video",
+    "category": "development",
     "tags": [
-      "video",
+      "dataset",
       "ai"
     ],
     "free_plan": true,
-    "description": "After Effects AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "AI学習データのラベル付けを行えるツールです。"
   },
   {
     "id": 280,
-    "name": "Photoshop AI",
-    "slug": "photoshop-ai",
+    "name": "SuperAnnotate",
+    "slug": "superannotate",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
+      "dataset",
       "ai"
     ],
     "free_plan": true,
-    "description": "Photoshop AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "AIデータアノテーションを行えるツールです。"
   },
   {
     "id": 281,
-    "name": "Illustrator AI",
-    "slug": "illustrator-ai",
+    "name": "Scale AI",
+    "slug": "scale-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "dataset",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Illustrator AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIデータ作成やラベリングを行えるツールです。"
   },
   {
     "id": 282,
-    "name": "Lightroom AI",
-    "slug": "lightroom-ai",
+    "name": "Snorkel AI",
+    "slug": "snorkel-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "dataset",
+      "ai"
     ],
     "free_plan": true,
-    "description": "Lightroom AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI学習データ作成を支援するツールです。"
   },
   {
     "id": 283,
-    "name": "DaVinci Resolve AI",
-    "slug": "davinci-resolve-ai",
+    "name": "Label Studio",
+    "slug": "label-studio",
     "url": "",
-    "category": "video",
+    "category": "development",
     "tags": [
-      "video",
+      "dataset",
       "ai"
     ],
     "free_plan": true,
-    "description": "DaVinci Resolve AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "AIデータラベリングを行えるオープンソースツールです。"
   },
   {
     "id": 284,
-    "name": "Final Cut AI",
-    "slug": "final-cut-ai",
+    "name": "DataRobot",
+    "slug": "datarobot",
     "url": "",
-    "category": "video",
+    "category": "development",
     "tags": [
-      "video",
-      "ai"
+      "ml",
+      "automation"
     ],
     "free_plan": true,
-    "description": "Final Cut AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "機械学習モデル開発を自動化できるツールです。"
   },
   {
     "id": 285,
-    "name": "Topaz Video AI",
-    "slug": "topaz-video-ai",
+    "name": "H2O AI",
+    "slug": "h2o-ai",
     "url": "",
-    "category": "video",
+    "category": "development",
     "tags": [
-      "video",
+      "ml",
       "ai"
     ],
     "free_plan": true,
-    "description": "Topaz Video AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+    "description": "機械学習モデルを構築できるAIプラットフォームです。"
   },
   {
     "id": 286,
-    "name": "Topaz Gigapixel AI",
-    "slug": "topaz-gigapixel-ai",
+    "name": "RapidMiner",
+    "slug": "rapidminer",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "ml",
+      "analytics"
     ],
     "free_plan": true,
-    "description": "Topaz Gigapixel AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "AI分析や機械学習モデル作成を行えるツールです。"
   },
   {
     "id": 287,
-    "name": "Gigapixel AI",
-    "slug": "gigapixel-ai",
+    "name": "KNIME AI",
+    "slug": "knime-ai",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "ml",
+      "analytics"
     ],
     "free_plan": true,
-    "description": "Gigapixel AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "AI分析やデータ処理を行えるツールです。"
   },
   {
     "id": 288,
-    "name": "Remini AI",
-    "slug": "remini-ai",
+    "name": "Orange AI",
+    "slug": "orange-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "ml",
+      "analytics"
     ],
     "free_plan": true,
-    "description": "Remini AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "データ分析や機械学習を行えるツールです。"
   },
   {
     "id": 289,
-    "name": "Vance AI",
-    "slug": "vance-ai",
+    "name": "Dataiku",
+    "slug": "dataiku",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "ml",
+      "platform"
     ],
     "free_plan": true,
-    "description": "Vance AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AI開発やデータ分析を行えるプラットフォームです。"
   },
   {
     "id": 290,
-    "name": "Cutout Pro",
-    "slug": "cutout-pro",
+    "name": "BigML",
+    "slug": "bigml",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "ml",
+      "platform"
     ],
     "free_plan": true,
-    "description": "Cutout ProはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "機械学習モデル作成を行えるAIツールです。"
   },
   {
     "id": 291,
-    "name": "Designs.ai",
-    "slug": "designs-ai",
-    "url": "https://designs.ai",
-    "category": "design",
+    "name": "Predibase",
+    "slug": "predibase",
+    "url": "",
+    "category": "development",
     "tags": [
-      "design",
-      "branding",
-      "marketing"
+      "llm",
+      "platform"
     ],
     "free_plan": true,
-    "description": "ロゴや動画、デザイン素材の作成を支援する総合型AIデザインサービスです。"
+    "description": "LLMモデルの開発や管理を行えるAIツールです。"
   },
   {
     "id": 292,
-    "name": "BrandCrowd",
-    "slug": "brandcrowd",
+    "name": "OctoAI",
+    "slug": "octoai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "llm",
+      "platform"
     ],
     "free_plan": true,
-    "description": "BrandCrowdはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIモデルの実行や管理を行えるツールです。"
   },
   {
     "id": 293,
-    "name": "Looka AI",
-    "slug": "looka-ai",
-    "url": "https://looka.com",
-    "category": "design",
+    "name": "Replicate",
+    "slug": "replicate",
+    "url": "",
+    "category": "development",
     "tags": [
-      "design",
-      "logo",
-      "branding"
+      "ai",
+      "models"
     ],
-    "free_plan": false,
-    "description": "Looka AIはデザイン制作を支援するAIツールです。ロゴ、UI、資料、ブランド素材の作成に役立ちます。"
+    "free_plan": true,
+    "description": "AIモデルをAPIとして利用できるサービスです。"
   },
   {
     "id": 294,
-    "name": "Tailor Brands AI",
-    "slug": "tailor-brands-ai",
+    "name": "Modal AI",
+    "slug": "modal-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "ai",
+      "cloud"
     ],
     "free_plan": true,
-    "description": "Tailor Brands AIはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIモデルをクラウドで実行できるプラットフォームです。"
   },
   {
     "id": 295,
-    "name": "Logo Maker AI",
-    "slug": "logo-maker-ai",
+    "name": "Banana AI",
+    "slug": "banana-ai",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "ai",
+      "api"
     ],
     "free_plan": true,
-    "description": "Logo Maker AIはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "AIモデルをAPIとして利用できるサービスです。"
   },
   {
     "id": 296,
-    "name": "AI Picasso",
-    "slug": "ai-picasso",
+    "name": "Together AI",
+    "slug": "together-ai",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "llm",
+      "api"
     ],
     "free_plan": true,
-    "description": "AI PicassoはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "AIモデルをAPIで利用できるAIプラットフォームです。"
   },
   {
     "id": 297,
-    "name": "Waifu Diffusion",
-    "slug": "waifu-diffusion",
+    "name": "Groq AI",
+    "slug": "groq-ai",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "llm",
+      "api"
     ],
     "free_plan": true,
-    "description": "Waifu DiffusionはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "高速AI推論を提供するAIプラットフォームです。"
   },
   {
     "id": 298,
-    "name": "NovelDiffusion",
-    "slug": "noveldiffusion",
+    "name": "Mistral AI",
+    "slug": "mistral-ai",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "llm",
+      "models"
     ],
     "free_plan": true,
-    "description": "NovelDiffusionはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "オープンモデルを提供するAI企業のサービスです。"
   },
   {
     "id": 299,
-    "name": "Anything Diffusion",
-    "slug": "anything-diffusion",
+    "name": "Cohere AI",
+    "slug": "cohere-ai",
     "url": "",
-    "category": "image",
+    "category": "development",
     "tags": [
-      "image",
-      "ai"
+      "llm",
+      "api"
     ],
     "free_plan": true,
-    "description": "Anything DiffusionはAI画像生成ツールです。テキストから画像やイラストを生成でき、デザインやクリエイティブ制作に利用できます。"
+    "description": "自然言語AIモデルを提供するAIプラットフォームです。"
   },
   {
     "id": 300,
-    "name": "SDXL",
-    "slug": "sdxl",
+    "name": "AI21 Labs",
+    "slug": "ai21-labs",
     "url": "",
-    "category": "ai-tool",
+    "category": "development",
     "tags": [
-      "ai-tool"
+      "llm",
+      "api"
     ],
     "free_plan": true,
-    "description": "SDXLはAIを活用したツールです。生成・分析・自動化など幅広い用途に利用できます。"
+    "description": "自然言語処理AIモデルを提供するAIサービスです。"
   }
 ]
