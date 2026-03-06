@@ -3,155 +3,117 @@
 }
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
-    background: #f5f7fb;
+    background: #f6f7fb;
     color: #222;
     line-height: 1.6;
 }
 
-/* =====================
-links
-===================== */
+/* header */
 
-a {
-    text-decoration: none;
-    color: #2563eb;
+header {
+    background: white;
+    border-bottom: 1px solid #eee;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* =====================
-container
-===================== */
 
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-/* =====================
-header
-===================== */
-
-header {
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-}
-
-header h1 {
-    font-size: 20px;
+h1 {
     margin: 0;
+    font-size: 24px;
 }
 
 nav a {
-    margin-left: 18px;
-    font-size: 14px;
-    color: #555;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
 }
 
-/* =====================
-hero
-===================== */
+/* hero */
 
 .hero {
+    background: linear-gradient(135deg, #6c63ff, #4f9cff);
+    color: white;
+    padding: 60px 20px;
     text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(#ffffff, #f4f6fb);
-    border-bottom: 1px solid #e5e7eb;
 }
 
 .hero h2 {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 10px;
 }
 
 .hero p {
-    color: #666;
-    margin-bottom: 24px;
+    opacity: 0.9;
 }
 
-/* =====================
-search
-===================== */
+/* search */
+
+.search {
+    margin-top: 20px;
+}
 
 .search input {
-    width: 100%;
-    max-width: 480px;
-    padding: 14px 16px;
+    width: 340px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
     font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #d1d5db;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
 }
 
-/* =====================
-sections
-===================== */
+/* section */
 
 .section {
-    margin: 50px 0;
+    padding: 40px 20px;
 }
 
+.section h1,
 .section h2 {
     margin-bottom: 20px;
-    font-weight: 600;
 }
 
-/* =====================
-grid
-===================== */
+/* grid */
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-/* =====================
-card
-===================== */
+/* cards */
 
 .card {
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    padding: 20px;
-    transition: .2s;
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: .15s;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.card h3 {
-    margin: 0;
-    font-size: 18px;
+.card a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
 }
 
 .card p {
     font-size: 14px;
-    color: #555;
-    margin-top: 10px;
+    color: #666;
+    margin-top: 8px;
 }
 
-/* =====================
-card logo
-===================== */
+/* card header */
 
 .card-head {
     display: flex;
@@ -160,220 +122,88 @@ card logo
     margin-bottom: 8px;
 }
 
+/* card logo */
+
 .card-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    flex: 0 0 22px;
 }
 
-/* =====================
-ranking
-===================== */
+/* fallback */
 
-.rank-number {
-    font-weight: bold;
-    color: #2563eb;
-    margin-right: 6px;
+.card-logo-fallback {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    flex: 0 0 22px;
 }
 
-/* =====================
-tool page
-===================== */
+/* tool page */
 
 .tool-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
-}
-
-.tool-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    padding: 4px;
-    background: #fff;
-}
-
-.tool-meta {
-    color: #666;
-    font-size: 14px;
     margin-bottom: 10px;
 }
 
-/* =====================
-button
-===================== */
-
-.btn {
-    display: inline-block;
-    padding: 9px 16px;
-    background: #2563eb;
-    color: #fff;
-    border-radius: 6px;
-    font-size: 14px;
-    margin-top: 10px;
+.tool-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    flex: 0 0 38px;
 }
 
-.btn:hover {
-    background: #1e4fd8;
-}
-
-/* =====================
-category
-===================== */
-
-.cat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
-}
-
-.cat-card {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    padding: 16px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+.tool-logo-fallback {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: inline-flex;
     align-items: center;
-    font-weight: 500;
-    transition: .15s;
+    justify-content: center;
+    background: #e5e7eb;
+    color: #555;
+    font-size: 18px;
+    font-weight: 700;
+    flex: 0 0 38px;
 }
 
-.cat-card:hover {
-    background: #f8fafc;
+.tool-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
-/* =====================
-footer
-===================== */
+/* breadcrumb */
+
+.breadcrumb {
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #555;
+}
+
+.breadcrumb span {
+    color: #999;
+}
+
+/* footer */
 
 footer {
-    margin-top: 70px;
+    text-align: center;
     padding: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
-}
-
-/* =====================
-mobile
-===================== */
-
-@media (max-width:700px) {
-
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-/* ======================
-UI polish
-====================== */
-
-/* hero background */
-
-.hero {
-    background:
-        linear-gradient(180deg, #ffffff, #eef2ff);
-}
-
-/* card polish */
-
-.card {
-    transition:
-        transform .18s ease,
-        box-shadow .18s ease,
-        border-color .18s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, .10);
-    border-color: #dbe3ff;
-}
-
-/* card title */
-
-.card h3 a {
-    color: #111;
-}
-
-.card h3 a:hover {
-    color: #2563eb;
-}
-
-/* ranking */
-
-.ranking li {
-    padding: 8px 0;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.ranking li:last-child {
-    border: none;
-}
-
-.rank-number {
-    display: inline-block;
-    width: 22px;
-    text-align: center;
-    font-weight: 700;
-    color: #2563eb;
-}
-
-/* button polish */
-
-.btn {
-    box-shadow: 0 4px 12px rgba(37, 99, 235, .25);
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(37, 99, 235, .35);
-}
-
-/* category card */
-
-.cat-card {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .04);
-}
-
-.cat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
-}
-
-/* tool header polish */
-
-.tool-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-/* screenshot */
-
-.tool-shot img {
-    margin-top: 10px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 26px rgba(0, 0, 0, .08);
+    font-size: 13px;
+    color: #888;
 }

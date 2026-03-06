@@ -1,49 +1,95 @@
 const fs = require("fs")
 const path = require("path")
 
-const tools = require("../data/tools.json")
+const root = path.resolve(__dirname, "..")
+const dataFile = path.join(root, "data", "tools.json")
+const outDir = path.join(root, "site_out")
 
-const outDir = "site_out"
-
-/* =========================
-utility
-========================= */
+const tools = JSON.parse(fs.readFileSync(dataFile, "utf8"))
 
 function ensureDir(dir) {
-    if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })
-    }
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
 }
 
-function esc(str = "") {
-    return str.replace(/[&<>"]/g, c => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;"
-    })[c])
+function slug(s) {
+    return String(s || "")
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]/g, "")
 }
 
-function slug(str = "") {
-    return str.toLowerCase().replace(/\s+/g, "-")
+function esc(s) {
+    return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
 }
 
 function safeDesc(t) {
-    return t.description || ""
+    return t.description || `${t.name}のAIツール紹介ページ`
 }
 
-/* =========================
-layout
-========================= */
+function safeUrl(u) {
+    return u || "#"
+}
 
-function layout(title, body, desc = "") {
+function copyPublic() {
+    const src = path.join(root, "public")
+    if (!fs.existsSync(src)) return
+    fs.cpSync(src, outDir, { recursive: true })
+}
+
+function getLogoUrl(url) {
+    if (!url || url === "#") return ""
+    try {
+        const domain = new URL(url).hostname
+        if (!domain) return ""
+        return `https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(domain)}`
+    } catch {
+        return ""
+    }
+}
+
+function getInitial(name) {
+    const s = String(name || "").trim()
+    return s ? esc(s[0].toUpperCase()) : "?"
+}
+
+function renderLogo(name, url, imgClass = "card-logo", fallbackClass = "card-logo-fallback") {
+    const logoUrl = getLogoUrl(url)
+    const initial = getInitial(name)
+
+    if (!logoUrl) {
+        return `<span class="${fallbackClass}" aria-hidden="true">${initial}</span>`
+    }
+
+    return `
+<img
+  class="${imgClass}"
+  src="${logoUrl}"
+  alt="${esc(name)} logo"
+  loading="lazy"
+  referrerpolicy="no-referrer"
+  onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';"
+>
+<span class="${fallbackClass}" aria-hidden="true" style="display:none;">${initial}</span>
+`
+}
+
+function layout(title, body, desc = "AIツール比較サイト") {
 
     return `<!DOCTYPE html>
 <html lang="ja">
 <head>
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>${esc(title)}</title>
+
 <meta name="description" content="${esc(desc)}">
 
 <link rel="stylesheet" href="/css/style.css">
@@ -53,6 +99,7 @@ function layout(title, body, desc = "") {
 <body>
 
 <header>
+
 <div class="container">
 
 <h1>
@@ -60,44 +107,48 @@ function layout(title, body, desc = "") {
 </h1>
 
 <nav>
-<a href="/tools/">AIツール一覧</a>
+
+<a href="/ai-tools/">AIツール一覧</a>
 <a href="/ranking/">ランキング</a>
 <a href="/category/">カテゴリ</a>
+
 </nav>
 
 </div>
+
 </header>
 
 ${body}
 
 <footer>
-AIツール比較サイト
+
+AI Tools Directory
+
 </footer>
 
 </body>
 </html>`
 }
 
-/* =========================
-ロゴ取得
-========================= */
+function breadcrumb(cat, name) {
 
-function getLogo(url) {
+    return `
+<div class="container breadcrumb">
 
-    let domain = ""
+<a href="/">ホーム</a>
+<span> › </span>
 
-    try {
-        domain = new URL(url).hostname
-    } catch (e) { }
+<a href="/category/${slug(cat)}/">
+${esc(cat)}
+</a>
 
-    if (!domain) return ""
+<span> › </span>
 
-    return `https://www.google.com/s2/favicons?sz=64&domain=${domain}`
+${esc(name)}
+
+</div>
+`
 }
-
-/* =========================
-ツールページ生成
-========================= */
 
 function buildTools() {
 
@@ -107,176 +158,446 @@ function buildTools() {
 
         ensureDir(dir)
 
-        const logo = getLogo(t.url)
+        const related = tools
+            .filter(x => x.slug !== t.slug && x.category === t.category)
+            .slice(0, 6)
+
+        const relatedHtml = related.map(r => `
+
+<li>
+<a href="/tools/${r.slug}/">
+${esc(r.name)}
+</a>
+</li>
+
+`).join("")
 
         const body = `
+
+${breadcrumb(t.category, t.name)}
 
 <section class="section container">
 
 <div class="tool-header">
-
-<img class="tool-logo" src="${logo}" alt="${esc(t.name)}">
-
+${renderLogo(t.name, safeUrl(t.url), "tool-logo", "tool-logo-fallback")}
 <h1>${esc(t.name)}</h1>
-
 </div>
 
 <p class="tool-meta">
 
 カテゴリ:
-<a href="/category/${slug(t.category)}">
+<a href="/category/${slug(t.category)}/">
 ${esc(t.category)}
 </a>
 
 </p>
 
-<p>
-
-${esc(safeDesc(t))}
-
-</p>
+<p>${esc(safeDesc(t))}</p>
 
 <p>
 
-<a class="btn" href="${t.url}" target="_blank">
+<a href="${safeUrl(t.url)}" target="_blank" rel="noopener noreferrer">
 公式サイト
 </a>
 
 </p>
 
 </section>
+
+<section class="section container">
+
+<h2>関連AIツール</h2>
+
+<ul>
+
+${relatedHtml}
+
+</ul>
+
+</section>
+
 `
 
         const html = layout(
-
             `${t.name} | AIツール`,
-
             body,
-
-            t.description
-
+            `${t.name}のAIツール情報`
         )
 
         fs.writeFileSync(
-
             path.join(dir, "index.html"),
-
             html
-
         )
 
     })
 
 }
 
-/* =========================
-トップページ
-========================= */
+function buildList() {
 
-function buildHome() {
-
-    const toolCount = tools.length
-
-    const shuffled = [...tools].sort(() => 0.5 - Math.random())
-
-    const popular = shuffled.slice(0, 8)
-
-    const popularHtml = popular.map(t => {
-
-        const logo = getLogo(t.url)
-
-        return `
+    const items = tools.map(t => `
 
 <div class="card">
 
 <div class="card-head">
-
-<img class="card-logo" src="${logo}">
-
+${renderLogo(t.name, safeUrl(t.url), "card-logo", "card-logo-fallback")}
 <h3>
-
 <a href="/tools/${t.slug}/">
-
 ${esc(t.name)}
-
 </a>
-
 </h3>
-
 </div>
 
+<p>${esc(safeDesc(t))}</p>
+
 <p>
-
-${esc(safeDesc(t))}
-
+<a href="${safeUrl(t.url)}" target="_blank" rel="noopener noreferrer">
+公式サイト →
+</a>
 </p>
 
 </div>
 
+`).join("")
+
+    const body = `
+
+<section class="section container">
+
+<h1>AIツール一覧</h1>
+
+<p>現在 ${tools.length} のAIツールを掲載</p>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
 `
 
-    }).join("")
+    const html = layout("AIツール一覧", body)
 
-    /* ランキング */
+    const dir = path.join(outDir, "ai-tools")
 
-    const ranking = tools.slice(0, 10)
+    ensureDir(dir)
 
-    const rankingHtml = ranking.map((t, i) => `
+    fs.writeFileSync(path.join(dir, "index.html"), html)
 
-<li>
+}
 
-<span class="rank-number">${i + 1}</span>
+function buildCategories() {
 
-<a href="/tools/${t.slug}/">
-
-${esc(t.name)}
-
-</a>
-
-</li>
-
-`).join("")
-
-    /* 新着 */
-
-    const latest = [...tools].reverse().slice(0, 8)
-
-    const latestHtml = latest.map(t => `
-
-<li>
-
-<a href="/tools/${t.slug}/">
-
-${esc(t.name)}
-
-</a>
-
-</li>
-
-`).join("")
-
-    /* カテゴリ */
-
-    const categoryMap = {}
+    const map = {}
 
     tools.forEach(t => {
-        if (!categoryMap[t.category]) categoryMap[t.category] = 0
-        categoryMap[t.category]++
+
+        if (!t.category) return
+
+        if (!map[t.category]) map[t.category] = []
+
+        map[t.category].push(t)
+
     })
 
-    const catHtml = Object.entries(categoryMap).map(([c, count]) => `
+    Object.entries(map).forEach(([cat, list]) => {
 
-<a class="cat-card" href="/category/${slug(c)}/">
+        const dir = path.join(outDir, "category", slug(cat))
 
-<span>${esc(c)}</span>
+        ensureDir(dir)
 
-<span>${count}</span>
+        const items = list.map(t => `
 
+<div class="card">
+
+<div class="card-head">
+${renderLogo(t.name, safeUrl(t.url), "card-logo", "card-logo-fallback")}
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
 </a>
+</div>
+
+<p>${esc(safeDesc(t))}</p>
+
+</div>
 
 `).join("")
 
-    /* 本文 */
+        const body = `
+
+<section class="section container">
+
+<h1>${esc(cat)} AIツール</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
+`
+
+        const html = layout(`${cat} AIツール一覧`, body)
+
+        fs.writeFileSync(path.join(dir, "index.html"), html)
+
+    })
+
+}
+
+function buildCategoryIndex() {
+
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
+
+    const items = cats.map(c => `
+
+<div class="card">
+
+<a href="/category/${slug(c)}/">
+
+${esc(c)}
+
+</a>
+
+</div>
+
+`).join("")
+
+    const body = `
+
+<section class="section container">
+
+<h1>AIツールカテゴリ</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
+`
+
+    const html = layout("AIツールカテゴリ", body)
+
+    const dir = path.join(outDir, "category")
+
+    ensureDir(dir)
+
+    fs.writeFileSync(path.join(dir, "index.html"), html)
+
+}
+
+function buildRanking() {
+
+    const top = tools.slice(0, 50)
+
+    const items = top.map((t, i) => `
+
+<div class="card">
+
+<div class="card-head">
+${renderLogo(t.name, safeUrl(t.url), "card-logo", "card-logo-fallback")}
+<h3>${i + 1}.
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
+</a>
+</h3>
+</div>
+
+<p>${esc(safeDesc(t))}</p>
+
+</div>
+
+`).join("")
+
+    const body = `
+
+<section class="section container">
+
+<h1>AIツール人気ランキング</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
+`
+
+    const html = layout("AIツールランキング", body)
+
+    const dir = path.join(outDir, "ranking")
+
+    ensureDir(dir)
+
+    fs.writeFileSync(path.join(dir, "index.html"), html)
+
+}
+
+function buildSearch() {
+
+    const dir = path.join(outDir, "search")
+
+    ensureDir(dir)
+
+    const data = JSON.stringify(
+        tools.map(t => ({
+            name: t.name,
+            slug: t.slug,
+            desc: t.description || "",
+            tags: t.tags || [],
+            category: t.category || ""
+        }))
+    )
+
+    const body = `
+
+<section class="section container">
+
+<h1>AIツール検索</h1>
+
+<input id="searchBox" placeholder="AIツール検索">
+
+<div id="result" class="grid"></div>
+
+</section>
+
+<script>
+
+const tools=${data}
+
+const box=document.getElementById("searchBox")
+const result=document.getElementById("result")
+
+function search(q){
+
+result.innerHTML=""
+
+if(q.length<2)return
+
+const hits=tools.filter(t=>
+
+t.name.toLowerCase().includes(q)
+||
+t.desc.toLowerCase().includes(q)
+||
+t.category.toLowerCase().includes(q)
+||
+t.tags.join(" ").toLowerCase().includes(q)
+
+).slice(0,50)
+
+hits.forEach(t=>{
+
+const card=document.createElement("div")
+
+card.className="card"
+
+card.innerHTML=
+'<h3><a href="/tools/'+t.slug+'/">'+t.name+'</a></h3>'+
+'<p>'+t.desc+'</p>'
+
+result.appendChild(card)
+
+})
+
+}
+
+box.addEventListener("input",e=>{
+search(e.target.value.toLowerCase())
+})
+
+const params=new URLSearchParams(location.search)
+
+const q=params.get("q")
+
+if(q){
+box.value=q
+search(q.toLowerCase())
+}
+
+</script>
+
+`
+
+    const html = layout("AIツール検索", body)
+
+    fs.writeFileSync(path.join(dir, "index.html"), html)
+
+}
+
+function buildSitemap() {
+
+    let urls = ["/", "/ai-tools/", "/ranking/", "/category/", "/search/"]
+
+    tools.forEach(t => {
+        urls.push(`/tools/${t.slug}/`)
+    })
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+${urls.map(u => `
+
+<url>
+<loc>${u}</loc>
+</url>
+
+`).join("")}
+
+</urlset>
+`
+
+    fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml)
+
+}
+
+function buildHome() {
+
+    const shuffled = [...tools].sort(() => 0.5 - Math.random())
+    const featured = shuffled.slice(0, 8).map(t => `
+
+<div class="card">
+
+<div class="card-head">
+${renderLogo(t.name, safeUrl(t.url), "card-logo", "card-logo-fallback")}
+<h3>
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
+</a>
+</h3>
+</div>
+
+<p>${esc(safeDesc(t))}</p>
+
+</div>
+
+`).join("")
+
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
+
+    const catHtml = cats.map(c => `
+
+<div class="card">
+
+<a href="/category/${slug(c)}/">
+
+${esc(c)}
+
+</a>
+
+</div>
+
+`).join("")
 
     const body = `
 
@@ -286,15 +607,15 @@ ${esc(t.name)}
 
 <p>
 
-${toolCount}+ のAIツールを検索・比較できるディレクトリ
+人気AIツールを検索・比較できるディレクトリ
 
 </p>
 
-<div class="search">
+<form action="/search/" method="get" class="search">
 
-<input placeholder="AIツール検索">
+<input name="q" placeholder="AIツール検索">
 
-</div>
+</form>
 
 </section>
 
@@ -304,33 +625,9 @@ ${toolCount}+ のAIツールを検索・比較できるディレクトリ
 
 <div class="grid">
 
-${popularHtml}
+${featured}
 
 </div>
-
-</section>
-
-<section class="section container">
-
-<h2>AIツールランキング</h2>
-
-<ol>
-
-${rankingHtml}
-
-</ol>
-
-</section>
-
-<section class="section container">
-
-<h2>新着AIツール</h2>
-
-<ul>
-
-${latestHtml}
-
-</ul>
 
 </section>
 
@@ -338,7 +635,7 @@ ${latestHtml}
 
 <h2>AIツールカテゴリ</h2>
 
-<div class="cat-grid">
+<div class="grid">
 
 ${catHtml}
 
@@ -346,39 +643,42 @@ ${catHtml}
 
 </section>
 
+<section class="section container">
+
+<a href="/ai-tools/">
+
+すべてのAIツールを見る →
+
+</a>
+
+</section>
+
 `
 
-    const html = layout(
+    const html = layout("AIツール比較サイト", body)
 
-        "AIツール比較サイト",
-
-        body,
-
-        "AIツールを検索・比較できるディレクトリ"
-
-    )
-
-    fs.writeFileSync(
-
-        path.join(outDir, "index.html"),
-
-        html
-
-    )
+    fs.writeFileSync(path.join(outDir, "index.html"), html)
 
 }
-
-/* =========================
-build
-========================= */
 
 function build() {
 
     ensureDir(outDir)
 
+    copyPublic()
+
     buildTools()
+    buildList()
+    buildCategoryIndex()
+    buildCategories()
+
+    buildRanking()
+
+    buildSearch()
 
     buildHome()
+
+    buildSitemap()
 
 }
 
