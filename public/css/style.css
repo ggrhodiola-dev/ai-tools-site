@@ -7,7 +7,8 @@ body {
     margin: 0;
     background: #f6f7fb;
     color: #222;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 17px;
 }
 
 /* header */
@@ -20,20 +21,24 @@ header {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
 }
 
 nav a {
-    margin-right: 15px;
+    margin-right: 18px;
     text-decoration: none;
     color: #444;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* hero */
@@ -41,67 +46,72 @@ nav a {
 .hero {
     background: linear-gradient(135deg, #6c63ff, #4f9cff);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    margin-bottom: 12px;
 }
 
 .hero p {
-    opacity: 0.9;
+    opacity: 0.95;
     font-size: 20px;
 }
 
 /* search */
 
 .search {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .search input {
-    width: 340px;
-    padding: 12px;
-    border-radius: 6px;
+    width: 360px;
+    padding: 14px;
+    border-radius: 8px;
     border: none;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 /* section */
 
 .section {
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .section h1,
 .section h2 {
-    margin-bottom: 20px;
-    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+/* 本文 */
+
+.section p {
+    font-size: 18px;
 }
 
 /* grid */
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
 }
 
 /* cards */
 
 .card {
     background: white;
-    border-radius: 10px;
-    padding: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: .15s;
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
 .card a {
@@ -112,9 +122,9 @@ nav a {
 }
 
 .card p {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 /* card header */
@@ -122,33 +132,33 @@ nav a {
 .card-head {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
 /* card logo */
 
 .card-logo {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border-radius: 6px;
-    flex: 0 0 22px;
+    flex: 0 0 24px;
 }
 
 /* fallback */
 
 .card-logo-fallback {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: #e5e7eb;
     color: #555;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    flex: 0 0 22px;
+    flex: 0 0 24px;
 }
 
 /* tool page */
@@ -156,20 +166,20 @@ nav a {
 .tool-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 14px;
+    margin-bottom: 12px;
 }
 
 .tool-logo {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 8px;
-    flex: 0 0 38px;
+    flex: 0 0 42px;
 }
 
 .tool-logo-fallback {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 8px;
     display: inline-flex;
     align-items: center;
@@ -178,20 +188,20 @@ nav a {
     color: #555;
     font-size: 20px;
     font-weight: 700;
-    flex: 0 0 38px;
+    flex: 0 0 42px;
 }
 
 .tool-meta {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* breadcrumb */
 
 .breadcrumb {
-    font-size: 18px;
-    margin: 10px 0 20px;
+    font-size: 15px;
+    margin: 12px 0 24px;
 }
 
 .breadcrumb a {
@@ -207,22 +217,22 @@ nav a {
 
 footer {
     text-align: center;
-    padding: 30px;
-    font-size: 17px;
+    padding: 40px;
+    font-size: 14px;
     color: #888;
 }
 
 /* ▼ タグ表示 */
 
 .tags {
-    margin-top: 8px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
 .tag {
-    font-size: 15px;
+    font-size: 13px;
     background: #eef2ff;
     color: #4f46e5;
     padding: 4px 8px;
