@@ -19,14 +19,27 @@ function slug(s) {
         .replace(/[^\w-]/g, "")
 }
 
+function esc(s) {
+    return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+}
+
+function safeDesc(t) {
+    return t.description || `${t.name}のAIツール紹介ページ`
+}
+
+function safeUrl(u) {
+    return u || "#"
+}
+
 function copyPublic() {
-
     const src = path.join(root, "public")
-
     if (!fs.existsSync(src)) return
-
     fs.cpSync(src, outDir, { recursive: true })
-
 }
 
 function layout(title, body, desc = "AIツール比較サイト") {
@@ -38,9 +51,9 @@ function layout(title, body, desc = "AIツール比較サイト") {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>${title}</title>
+<title>${esc(title)}</title>
 
-<meta name="description" content="${desc}">
+<meta name="description" content="${esc(desc)}">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -80,6 +93,26 @@ AI Tools Directory
 </html>`
 }
 
+function breadcrumb(cat, name) {
+
+    return `
+<div class="container breadcrumb">
+
+<a href="/">ホーム</a>
+<span> › </span>
+
+<a href="/category/${slug(cat)}/">
+${esc(cat)}
+</a>
+
+<span> › </span>
+
+${esc(name)}
+
+</div>
+`
+}
+
 function buildTools() {
 
     tools.forEach(t => {
@@ -93,44 +126,40 @@ function buildTools() {
             .slice(0, 6)
 
         const relatedHtml = related.map(r => `
+
 <li>
 <a href="/tools/${r.slug}/">
-${r.name}
+${esc(r.name)}
 </a>
 </li>
-`).join("")
 
-        const breadcrumb = `
-<div class="container breadcrumb">
-<a href="/">ホーム</a>
-<span> › </span>
-<a href="/category/${slug(t.category)}/">${t.category}</a>
-<span> › </span>
-${t.name}
-</div>
-`
+`).join("")
 
         const body = `
 
-${breadcrumb}
+${breadcrumb(t.category, t.name)}
 
 <section class="section container">
 
-<h1>${t.name}</h1>
+<h1>${esc(t.name)}</h1>
 
 <p class="tool-meta">
+
 カテゴリ:
 <a href="/category/${slug(t.category)}/">
-${t.category}
+${esc(t.category)}
 </a>
+
 </p>
 
-<p>${t.description || ""}</p>
+<p>${esc(safeDesc(t))}</p>
 
 <p>
-<a href="${t.url || "#"}" target="_blank">
+
+<a href="${safeUrl(t.url)}" target="_blank">
 公式サイト
 </a>
+
 </p>
 
 </section>
@@ -146,12 +175,13 @@ ${relatedHtml}
 </ul>
 
 </section>
+
 `
 
         const html = layout(
             `${t.name} | AIツール`,
             body,
-            `${t.name}の特徴・使い方・公式サイト`
+            `${t.name}のAIツール情報`
         )
 
         fs.writeFileSync(
@@ -170,21 +200,17 @@ function buildList() {
 <div class="card">
 
 <h3>
-
 <a href="/tools/${t.slug}/">
-${t.name}
+${esc(t.name)}
 </a>
-
 </h3>
 
-<p>${t.description || ""}</p>
+<p>${esc(safeDesc(t))}</p>
 
 <p>
-
-<a href="${t.url || "#"}" target="_blank">
+<a href="${safeUrl(t.url)}" target="_blank">
 公式サイト →
 </a>
-
 </p>
 
 </div>
@@ -197,11 +223,7 @@ ${t.name}
 
 <h1>AIツール一覧</h1>
 
-<p>
-
-現在 ${tools.length} のAIツールを掲載
-
-</p>
+<p>現在 ${tools.length} のAIツールを掲載</p>
 
 <div class="grid">
 
@@ -210,22 +232,16 @@ ${items}
 </div>
 
 </section>
+
 `
 
-    const html = layout(
-        "AIツール一覧",
-        body,
-        "人気AIツール一覧"
-    )
+    const html = layout("AIツール一覧", body)
 
     const dir = path.join(outDir, "ai-tools")
 
     ensureDir(dir)
 
-    fs.writeFileSync(
-        path.join(dir, "index.html"),
-        html
-    )
+    fs.writeFileSync(path.join(dir, "index.html"), html)
 
 }
 
@@ -254,10 +270,10 @@ function buildCategories() {
 <div class="card">
 
 <a href="/tools/${t.slug}/">
-${t.name}
+${esc(t.name)}
 </a>
 
-<p>${t.description || ""}</p>
+<p>${esc(safeDesc(t))}</p>
 
 </div>
 
@@ -267,7 +283,7 @@ ${t.name}
 
 <section class="section container">
 
-<h1>${cat} AIツール</h1>
+<h1>${esc(cat)} AIツール</h1>
 
 <div class="grid">
 
@@ -276,18 +292,12 @@ ${items}
 </div>
 
 </section>
+
 `
 
-        const html = layout(
-            `${cat} AIツール一覧`,
-            body,
-            `${cat}AIツールまとめ`
-        )
+        const html = layout(`${cat} AIツール一覧`, body)
 
-        fs.writeFileSync(
-            path.join(dir, "index.html"),
-            html
-        )
+        fs.writeFileSync(path.join(dir, "index.html"), html)
 
     })
 
@@ -303,7 +313,7 @@ function buildCategoryIndex() {
 
 <a href="/category/${slug(c)}/">
 
-${c}
+${esc(c)}
 
 </a>
 
@@ -324,22 +334,16 @@ ${items}
 </div>
 
 </section>
+
 `
 
-    const html = layout(
-        "AIツールカテゴリ",
-        body,
-        "AIツールカテゴリ一覧"
-    )
+    const html = layout("AIツールカテゴリ", body)
 
     const dir = path.join(outDir, "category")
 
     ensureDir(dir)
 
-    fs.writeFileSync(
-        path.join(dir, "index.html"),
-        html
-    )
+    fs.writeFileSync(path.join(dir, "index.html"), html)
 
 }
 
@@ -353,11 +357,11 @@ function buildRanking() {
 
 <h3>${i + 1}.
 <a href="/tools/${t.slug}/">
-${t.name}
+${esc(t.name)}
 </a>
 </h3>
 
-<p>${t.description || ""}</p>
+<p>${esc(safeDesc(t))}</p>
 
 </div>
 
@@ -376,94 +380,16 @@ ${items}
 </div>
 
 </section>
+
 `
 
-    const html = layout(
-        "AIツールランキング",
-        body,
-        "人気AIツールランキング"
-    )
+    const html = layout("AIツールランキング", body)
 
     const dir = path.join(outDir, "ranking")
 
     ensureDir(dir)
 
-    fs.writeFileSync(
-        path.join(dir, "index.html"),
-        html
-    )
-
-}
-
-function buildComparisons() {
-
-    const dir = path.join(outDir, "compare")
-
-    ensureDir(dir)
-
-    let count = 0
-
-    for (let i = 0; i < tools.length; i++) {
-
-        for (let j = i + 1; j < tools.length; j++) {
-
-            if (tools[i].category !== tools[j].category) continue
-
-            if (count > 200) break
-
-            const a = tools[i]
-            const b = tools[j]
-
-            const slugName = `${a.slug}-vs-${b.slug}`
-
-            const pageDir = path.join(dir, slugName)
-
-            ensureDir(pageDir)
-
-            const body = `
-
-<section class="section container">
-
-<h1>${a.name} vs ${b.name}</h1>
-
-<div class="grid">
-
-<div class="card">
-
-<h2>${a.name}</h2>
-
-<p>${a.description || ""}</p>
-
-</div>
-
-<div class="card">
-
-<h2>${b.name}</h2>
-
-<p>${b.description || ""}</p>
-
-</div>
-
-</div>
-
-</section>
-`
-
-            const html = layout(
-                `${a.name} vs ${b.name} 比較`,
-                body
-            )
-
-            fs.writeFileSync(
-                path.join(pageDir, "index.html"),
-                html
-            )
-
-            count++
-
-        }
-
-    }
+    fs.writeFileSync(path.join(dir, "index.html"), html)
 
 }
 
@@ -473,11 +399,15 @@ function buildSearch() {
 
     ensureDir(dir)
 
-    const data = JSON.stringify(tools.map(t => ({
-        name: t.name,
-        slug: t.slug,
-        desc: t.description
-    })))
+    const data = JSON.stringify(
+        tools.map(t => ({
+            name: t.name,
+            slug: t.slug,
+            desc: t.description || "",
+            tags: t.tags || [],
+            category: t.category || ""
+        }))
+    )
 
     const body = `
 
@@ -485,7 +415,7 @@ function buildSearch() {
 
 <h1>AIツール検索</h1>
 
-<input id="searchBox" placeholder="AIツール名検索">
+<input id="searchBox" placeholder="AIツール検索">
 
 <div id="result" class="grid"></div>
 
@@ -496,17 +426,24 @@ function buildSearch() {
 const tools=${data}
 
 const box=document.getElementById("searchBox")
-
 const result=document.getElementById("result")
 
 function search(q){
 
 result.innerHTML=""
 
-if(q.length<2) return
+if(q.length<2)return
 
 const hits=tools.filter(t=>
+
 t.name.toLowerCase().includes(q)
+||
+t.desc.toLowerCase().includes(q)
+||
+t.category.toLowerCase().includes(q)
+||
+t.tags.join(" ").toLowerCase().includes(q)
+
 ).slice(0,50)
 
 hits.forEach(t=>{
@@ -529,18 +466,22 @@ box.addEventListener("input",e=>{
 search(e.target.value.toLowerCase())
 })
 
+const params=new URLSearchParams(location.search)
+
+const q=params.get("q")
+
+if(q){
+box.value=q
+search(q.toLowerCase())
+}
+
 </script>
+
 `
 
-    const html = layout(
-        "AIツール検索",
-        body
-    )
+    const html = layout("AIツール検索", body)
 
-    fs.writeFileSync(
-        path.join(dir, "index.html"),
-        html
-    )
+    fs.writeFileSync(path.join(dir, "index.html"), html)
 
 }
 
@@ -559,9 +500,7 @@ function buildSitemap() {
 ${urls.map(u => `
 
 <url>
-
 <loc>${u}</loc>
-
 </url>
 
 `).join("")}
@@ -569,32 +508,7 @@ ${urls.map(u => `
 </urlset>
 `
 
-    fs.writeFileSync(
-        path.join(outDir, "sitemap.xml"),
-        xml
-    )
-
-}
-
-function build() {
-
-    ensureDir(outDir)
-
-    copyPublic()
-
-    buildTools()
-    buildList()
-    buildCategoryIndex()
-    buildCategories()
-
-    buildRanking()
-    buildComparisons()
-
-    buildSearch()
-
-    buildHome()
-
-    buildSitemap()
+    fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml)
 
 }
 
@@ -605,14 +519,12 @@ function buildHome() {
 <div class="card">
 
 <h3>
-
 <a href="/tools/${t.slug}/">
-${t.name}
+${esc(t.name)}
 </a>
-
 </h3>
 
-<p>${t.description || ""}</p>
+<p>${esc(safeDesc(t))}</p>
 
 </div>
 
@@ -626,7 +538,7 @@ ${t.name}
 
 <a href="/category/${slug(c)}/">
 
-${c}
+${esc(c)}
 
 </a>
 
@@ -687,18 +599,33 @@ ${catHtml}
 </a>
 
 </section>
+
 `
 
-    const html = layout(
-        "AIツール比較サイト",
-        body,
-        "AIツール検索・比較サイト"
-    )
+    const html = layout("AIツール比較サイト", body)
 
-    fs.writeFileSync(
-        path.join(outDir, "index.html"),
-        html
-    )
+    fs.writeFileSync(path.join(outDir, "index.html"), html)
+
+}
+
+function build() {
+
+    ensureDir(outDir)
+
+    copyPublic()
+
+    buildTools()
+    buildList()
+    buildCategoryIndex()
+    buildCategories()
+
+    buildRanking()
+
+    buildSearch()
+
+    buildHome()
+
+    buildSitemap()
 
 }
 
