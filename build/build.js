@@ -79,6 +79,19 @@ function renderLogo(name, url, imgClass = "card-logo", fallbackClass = "card-log
 `
 }
 
+function renderTags(t) {
+
+    if (!t.tags) return ""
+
+    return `
+<div class="tags">
+${t.tags.slice(0, 4).map(tag => `
+<span class="tag">${esc(tag)}</span>
+`).join("")}
+</div>
+`
+}
+
 function layout(title, body, desc = "AIツール比較サイト") {
 
     return `<!DOCTYPE html>
@@ -194,6 +207,8 @@ ${esc(t.category)}
 
 <p>${esc(safeDesc(t))}</p>
 
+${renderTags(t)}
+
 <p>
 
 <a href="${safeUrl(t.url)}" target="_blank" rel="noopener noreferrer">
@@ -249,6 +264,8 @@ ${esc(t.name)}
 </div>
 
 <p>${esc(safeDesc(t))}</p>
+
+${renderTags(t)}
 
 <p>
 <a href="${safeUrl(t.url)}" target="_blank" rel="noopener noreferrer">
@@ -321,6 +338,8 @@ ${esc(t.name)}
 
 <p>${esc(safeDesc(t))}</p>
 
+${renderTags(t)}
+
 </div>
 
 `).join("")
@@ -353,13 +372,28 @@ function buildCategoryIndex() {
 
     const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
 
+    const icon = {
+        chatbot: "💬",
+        image: "🖼️",
+        video: "🎬",
+        audio: "🎵",
+        writing: "✍️",
+        design: "🎨",
+        development: "💻",
+        search: "🔎",
+        productivity: "📋",
+        presentation: "📊",
+        website: "🌐",
+        "3d": "🧊"
+    }
+
     const items = cats.map(c => `
 
 <div class="card">
 
 <a href="/category/${slug(c)}/">
 
-${esc(c)}
+${icon[c] || "🤖"} ${esc(c)}
 
 </a>
 
@@ -412,6 +446,8 @@ ${esc(t.name)}
 
 <p>${esc(safeDesc(t))}</p>
 
+${renderTags(t)}
+
 </div>
 
 `).join("")
@@ -439,6 +475,163 @@ ${items}
     ensureDir(dir)
 
     fs.writeFileSync(path.join(dir, "index.html"), html)
+
+}
+
+function buildHome() {
+
+    const shuffled = [...tools].sort(() => 0.5 - Math.random())
+
+    // 人気ツール 12件
+    const featured = shuffled.slice(0, 12).map(t => `
+
+<div class="card">
+
+<div class="card-head">
+${renderLogo(t.name, safeUrl(t.url))}
+<h3>
+<a href="/tools/${t.slug}/">
+${esc(t.name)}
+</a>
+</h3>
+</div>
+
+<p>${esc(safeDesc(t))}</p>
+
+${renderTags(t)}
+
+</div>
+
+`).join("")
+
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
+
+    const icon = {
+        chatbot: "💬",
+        image: "🖼️",
+        video: "🎬",
+        audio: "🎵",
+        writing: "✍️",
+        design: "🎨",
+        development: "💻",
+        search: "🔎",
+        productivity: "📋",
+        presentation: "📊",
+        website: "🌐",
+        "3d": "🧊"
+    }
+
+    const catHtml = cats.map(c => `
+
+<div class="card">
+
+<a href="/category/${slug(c)}/">
+
+${icon[c] || "🤖"} ${esc(c)}
+
+</a>
+
+</div>
+
+`).join("")
+
+    const body = `
+
+<section class="hero">
+
+<h2>AIツール比較サイト</h2>
+
+<p>
+
+人気AIツールを検索・比較できるディレクトリ
+
+</p>
+
+<form action="/search/" method="get" class="search">
+
+<input name="q" placeholder="AIツール検索">
+
+</form>
+
+</section>
+
+<section class="section container">
+
+<h2>AIツールとは</h2>
+
+<p>
+AIツールとは、人工知能を利用して文章作成、画像生成、動画制作、音声生成、プログラミング支援などを行えるサービスの総称です。
+このサイトでは人気AIツールをカテゴリ別に整理し、比較しながら探せるようにまとめています。
+</p>
+
+</section>
+
+<section class="section container">
+
+<h2>人気AIツール</h2>
+
+<div class="grid">
+
+${featured}
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<h2>AIツールカテゴリ</h2>
+
+<div class="grid">
+
+${catHtml}
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<a href="/ai-tools/">
+
+すべてのAIツールを見る →
+
+</a>
+
+</section>
+
+`
+
+    const html = layout("AIツール比較サイト", body)
+
+    fs.writeFileSync(path.join(outDir, "index.html"), html)
+
+}
+
+function buildSitemap() {
+
+    let urls = ["/", "/ai-tools/", "/ranking/", "/category/", "/search/"]
+
+    tools.forEach(t => {
+        urls.push(`/tools/${t.slug}/`)
+    })
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+${urls.map(u => `
+
+<url>
+<loc>${u}</loc>
+</url>
+
+`).join("")}
+
+</urlset>
+`
+
+    fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml)
 
 }
 
@@ -515,15 +708,6 @@ box.addEventListener("input",e=>{
 search(e.target.value.toLowerCase())
 })
 
-const params=new URLSearchParams(location.search)
-
-const q=params.get("q")
-
-if(q){
-box.value=q
-search(q.toLowerCase())
-}
-
 </script>
 
 `
@@ -531,133 +715,6 @@ search(q.toLowerCase())
     const html = layout("AIツール検索", body)
 
     fs.writeFileSync(path.join(dir, "index.html"), html)
-
-}
-
-function buildSitemap() {
-
-    let urls = ["/", "/ai-tools/", "/ranking/", "/category/", "/search/"]
-
-    tools.forEach(t => {
-        urls.push(`/tools/${t.slug}/`)
-    })
-
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-${urls.map(u => `
-
-<url>
-<loc>${u}</loc>
-</url>
-
-`).join("")}
-
-</urlset>
-`
-
-    fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml)
-
-}
-
-function buildHome() {
-
-    const shuffled = [...tools].sort(() => 0.5 - Math.random())
-    const featured = shuffled.slice(0, 8).map(t => `
-
-<div class="card">
-
-<div class="card-head">
-${renderLogo(t.name, safeUrl(t.url), "card-logo", "card-logo-fallback")}
-<h3>
-<a href="/tools/${t.slug}/">
-${esc(t.name)}
-</a>
-</h3>
-</div>
-
-<p>${esc(safeDesc(t))}</p>
-
-</div>
-
-`).join("")
-
-    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
-
-    const catHtml = cats.map(c => `
-
-<div class="card">
-
-<a href="/category/${slug(c)}/">
-
-${esc(c)}
-
-</a>
-
-</div>
-
-`).join("")
-
-    const body = `
-
-<section class="hero">
-
-<h2>AIツール比較サイト</h2>
-
-<p>
-
-人気AIツールを検索・比較できるディレクトリ
-
-</p>
-
-<form action="/search/" method="get" class="search">
-
-<input name="q" placeholder="AIツール検索">
-
-</form>
-
-</section>
-
-<section class="section container">
-
-<h2>人気AIツール</h2>
-
-<div class="grid">
-
-${featured}
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<h2>AIツールカテゴリ</h2>
-
-<div class="grid">
-
-${catHtml}
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<a href="/ai-tools/">
-
-すべてのAIツールを見る →
-
-</a>
-
-</section>
-
-`
-
-    const html = layout("AIツール比較サイト", body)
-
-    fs.writeFileSync(path.join(outDir, "index.html"), html)
 
 }
 
@@ -671,13 +728,9 @@ function build() {
     buildList()
     buildCategoryIndex()
     buildCategories()
-
     buildRanking()
-
     buildSearch()
-
     buildHome()
-
     buildSitemap()
 
 }
