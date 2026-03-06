@@ -91,6 +91,10 @@ nav a {
     font-size: 18px;
 }
 
+.section p:last-child {
+    margin-bottom: 0;
+}
+
 /* grid */
 
 .grid {
