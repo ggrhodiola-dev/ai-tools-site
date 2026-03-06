@@ -3646,5 +3646,1229 @@
     ],
     "free_plan": true,
     "description": "SDXLはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 301,
+    "name": "Stable Diffusion",
+    "slug": "stable-diffusion",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Stable DiffusionはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 302,
+    "name": "DALL-E",
+    "slug": "dall-e",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "DALL-EはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 303,
+    "name": "Playground AI",
+    "slug": "playground-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Playground AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 304,
+    "name": "BlueWillow",
+    "slug": "bluewillow",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "BlueWillowはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 305,
+    "name": "Adobe Firefly",
+    "slug": "adobe-firefly",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Adobe FireflyはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 306,
+    "name": "Pika Labs",
+    "slug": "pika-labs",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Pika LabsはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 307,
+    "name": "Synthesia",
+    "slug": "synthesia",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "SynthesiaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 308,
+    "name": "HeyGen",
+    "slug": "heygen",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "HeyGenはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 309,
+    "name": "Luma AI",
+    "slug": "luma-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Luma AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 310,
+    "name": "Pictory",
+    "slug": "pictory",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PictoryはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 311,
+    "name": "Descript",
+    "slug": "descript",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "DescriptはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 312,
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "ElevenLabsはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 313,
+    "name": "Murf AI",
+    "slug": "murf-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Murf AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 314,
+    "name": "Speechify",
+    "slug": "speechify",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "SpeechifyはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 315,
+    "name": "Otter AI",
+    "slug": "otter-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Otter AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 316,
+    "name": "DeepL Write",
+    "slug": "deepl-write",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "DeepL WriteはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 317,
+    "name": "Quillbot",
+    "slug": "quillbot",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "QuillbotはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 318,
+    "name": "Copy AI",
+    "slug": "copy-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Copy AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 319,
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "WritesonicはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 320,
+    "name": "Jasper AI",
+    "slug": "jasper-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Jasper AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 321,
+    "name": "Rytr",
+    "slug": "rytr",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "RytrはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 322,
+    "name": "Sudowrite",
+    "slug": "sudowrite",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "SudowriteはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 323,
+    "name": "Notion AI",
+    "slug": "notion-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Notion AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 324,
+    "name": "Taskade AI",
+    "slug": "taskade-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Taskade AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 325,
+    "name": "Mem AI",
+    "slug": "mem-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Mem AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 326,
+    "name": "Tome AI",
+    "slug": "tome-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Tome AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 327,
+    "name": "Gamma AI",
+    "slug": "gamma-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Gamma AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 328,
+    "name": "Beautiful AI",
+    "slug": "beautiful-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Beautiful AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 329,
+    "name": "Perplexity Pro",
+    "slug": "perplexity-pro",
+    "url": "",
+    "category": "search",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Perplexity ProはAI検索エンジンです。Web情報をAIが整理して回答し、リサーチや情報収集を効率化できます。"
+  },
+  {
+    "id": 330,
+    "name": "Elicit AI",
+    "slug": "elicit-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Elicit AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 331,
+    "name": "Scite AI",
+    "slug": "scite-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Scite AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 332,
+    "name": "Consensus AI",
+    "slug": "consensus-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Consensus AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 333,
+    "name": "Phind",
+    "slug": "phind",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PhindはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 334,
+    "name": "Codeium",
+    "slug": "codeium",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "CodeiumはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 335,
+    "name": "Tabnine",
+    "slug": "tabnine",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "TabnineはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 336,
+    "name": "Replit Ghostwriter",
+    "slug": "replit-ghostwriter",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Replit GhostwriterはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 337,
+    "name": "Amazon CodeWhisperer",
+    "slug": "amazon-codewhisperer",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Amazon CodeWhispererはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 338,
+    "name": "Cursor AI",
+    "slug": "cursor-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Cursor AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 339,
+    "name": "Supermaven",
+    "slug": "supermaven",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "SupermavenはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 340,
+    "name": "Blackbox AI",
+    "slug": "blackbox-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Blackbox AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 341,
+    "name": "Durable AI",
+    "slug": "durable-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Durable AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 342,
+    "name": "10Web AI",
+    "slug": "10web-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "10Web AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 343,
+    "name": "Framer AI",
+    "slug": "framer-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Framer AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 344,
+    "name": "Builder AI",
+    "slug": "builder-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Builder AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 345,
+    "name": "Hostinger AI",
+    "slug": "hostinger-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Hostinger AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 346,
+    "name": "Looka AI",
+    "slug": "looka-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Looka AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 347,
+    "name": "LogoAI",
+    "slug": "logoai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "LogoAIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 348,
+    "name": "Brandmark",
+    "slug": "brandmark",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "BrandmarkはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 349,
+    "name": "Khroma",
+    "slug": "khroma",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "KhromaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 350,
+    "name": "Uizard",
+    "slug": "uizard",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "UizardはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 351,
+    "name": "Galileo AI",
+    "slug": "galileo-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Galileo AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 352,
+    "name": "Magician AI",
+    "slug": "magician-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Magician AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 353,
+    "name": "Remove BG",
+    "slug": "remove-bg",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Remove BGはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 354,
+    "name": "Clipdrop",
+    "slug": "clipdrop",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "ClipdropはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 355,
+    "name": "Cleanup Pictures",
+    "slug": "cleanup-pictures",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Cleanup PicturesはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 356,
+    "name": "Upscale Media",
+    "slug": "upscale-media",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Upscale MediaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 357,
+    "name": "Topaz AI",
+    "slug": "topaz-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Topaz AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 358,
+    "name": "RunDiffusion",
+    "slug": "rundiffusion",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "RunDiffusionはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 359,
+    "name": "Krea AI",
+    "slug": "krea-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Krea AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 360,
+    "name": "Scenario AI",
+    "slug": "scenario-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Scenario AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 361,
+    "name": "Artbreeder",
+    "slug": "artbreeder",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "ArtbreederはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 362,
+    "name": "NightCafe",
+    "slug": "nightcafe",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "NightCafeはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 363,
+    "name": "DreamStudio",
+    "slug": "dreamstudio",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "DreamStudioはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 364,
+    "name": "PlayHT",
+    "slug": "playht",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PlayHTはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 365,
+    "name": "WellSaid Labs",
+    "slug": "wellsaid-labs",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "WellSaid LabsはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 366,
+    "name": "Resemble AI",
+    "slug": "resemble-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Resemble AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 367,
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Voice AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 368,
+    "name": "Cleanvoice AI",
+    "slug": "cleanvoice-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Cleanvoice AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 369,
+    "name": "Podcastle",
+    "slug": "podcastle",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PodcastleはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 370,
+    "name": "Opus Clip",
+    "slug": "opus-clip",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Opus ClipはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 371,
+    "name": "Vidyo AI",
+    "slug": "vidyo-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Vidyo AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 372,
+    "name": "Wisecut",
+    "slug": "wisecut",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "WisecutはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 373,
+    "name": "FlexClip AI",
+    "slug": "flexclip-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "FlexClip AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 374,
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "url": "",
+    "category": "video",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "InVideo AIはAI動画生成・編集ツールです。動画制作や映像コンテンツ作成をAIで効率化できます。"
+  },
+  {
+    "id": 375,
+    "name": "Kapwing AI",
+    "slug": "kapwing-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Kapwing AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 376,
+    "name": "VEED AI",
+    "slug": "veed-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "VEED AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 377,
+    "name": "Designs AI",
+    "slug": "designs-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Designs AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 378,
+    "name": "Stockimg AI",
+    "slug": "stockimg-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Stockimg AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 379,
+    "name": "Hotpot AI",
+    "slug": "hotpot-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Hotpot AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 380,
+    "name": "DeepAI",
+    "slug": "deepai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "DeepAIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 381,
+    "name": "PromptHero",
+    "slug": "prompthero",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PromptHeroはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 382,
+    "name": "Lexica",
+    "slug": "lexica",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "LexicaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 383,
+    "name": "CivitAI",
+    "slug": "civitai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "CivitAIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 384,
+    "name": "PromptBase",
+    "slug": "promptbase",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PromptBaseはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 385,
+    "name": "PromptLayer",
+    "slug": "promptlayer",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "PromptLayerはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 386,
+    "name": "FlowGPT",
+    "slug": "flowgpt",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "FlowGPTはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
+  },
+  {
+    "id": 387,
+    "name": "AgentGPT",
+    "slug": "agentgpt",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AgentGPTはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
+  },
+  {
+    "id": 388,
+    "name": "AutoGPT",
+    "slug": "autogpt",
+    "url": "",
+    "category": "chatbot",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "AutoGPTはAIチャットアシスタントです。文章生成、質問回答、調査、プログラミング補助など幅広い用途に利用できます。"
+  },
+  {
+    "id": 389,
+    "name": "BabyAGI",
+    "slug": "babyagi",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "BabyAGIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 390,
+    "name": "Godmode AI",
+    "slug": "godmode-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Godmode AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 391,
+    "name": "Adept AI",
+    "slug": "adept-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Adept AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 392,
+    "name": "Character AI",
+    "slug": "character-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Character AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 393,
+    "name": "Janitor AI",
+    "slug": "janitor-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Janitor AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 394,
+    "name": "Chai AI",
+    "slug": "chai-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Chai AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 395,
+    "name": "Replika",
+    "slug": "replika",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "ReplikaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 396,
+    "name": "Pi AI",
+    "slug": "pi-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Pi AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 397,
+    "name": "Poe AI",
+    "slug": "poe-ai",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "Poe AIはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 398,
+    "name": "HuggingChat",
+    "slug": "huggingchat",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "HuggingChatはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 399,
+    "name": "LangChain",
+    "slug": "langchain",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "LangChainはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 400,
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "LlamaIndexはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 401,
+    "name": "Ollama",
+    "slug": "ollama",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "OllamaはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
+  },
+  {
+    "id": 402,
+    "name": "LM Studio",
+    "slug": "lm-studio",
+    "url": "",
+    "category": "ai-tool",
+    "tags": [
+      "ai"
+    ],
+    "free_plan": true,
+    "description": "LM StudioはAIを活用したツールです。生成・分析・自動化など様々な用途に利用できます。"
   }
 ]
