@@ -8,6 +8,8 @@ body {
     background: #f6f7fb;
     color: #222;
     line-height: 1.6;
+    /* ▼追加 */
+    font-size: 17px;
 }
 
 /* header */
