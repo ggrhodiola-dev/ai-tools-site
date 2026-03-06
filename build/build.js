@@ -92,7 +92,7 @@ ${t.tags.slice(0, 4).map(tag => `
 `
 }
 
-function layout(title, body, desc = "AIツール比較サイト") {
+function layout(title, body, desc = "AIツール紹介サイト") {
 
     return `<!DOCTYPE html>
 <html lang="ja">
@@ -116,7 +116,7 @@ function layout(title, body, desc = "AIツール比較サイト") {
 <div class="container">
 
 <h1>
-<a href="/">AIツール比較サイト</a>
+<a href="/">AIツール紹介サイト</a>
 </h1>
 
 <nav>
