@@ -148,13 +148,25 @@ function buildList() {
 
 <div class="card">
 
+<h3>
+
 <a href="/tools/${t.slug}/">
 
 ${t.name}
 
 </a>
 
-<p>${t.description || ""}</p>
+</h3>
+
+<p>${t.description}</p>
+
+<p>
+
+<a href="${t.url}" target="_blank">
+公式サイト →
+</a>
+
+</p>
 
 </div>
 
@@ -165,6 +177,12 @@ ${t.name}
 <section class="section container">
 
 <h1>AIツール一覧</h1>
+
+<p>
+
+現在 ${tools.length} のAIツールを掲載
+
+</p>
 
 <div class="grid">
 
@@ -364,13 +382,15 @@ ${items}
 
 function buildHome() {
 
-    const featured = tools.slice(0, 8).map(t => `
+    const featured = tools.map(t => `
 
 <div class="card">
 
+<h3>
 <a href="/tools/${t.slug}/">
 ${t.name}
 </a>
+</h3>
 
 <p>${t.description}</p>
 
@@ -378,13 +398,13 @@ ${t.name}
 
 `).join("")
 
-    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))].slice(0, 8)
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
 
     const catHtml = cats.map(c => `
 
 <div class="card">
 
-<a href="/category/${slug(c)}/">
+<a href="/category/${c}/">
 
 ${c}
 
@@ -398,29 +418,17 @@ ${c}
 
 <section class="hero">
 
-<h2>AIツール検索・比較サイト</h2>
+<h2>AIツール比較サイト</h2>
 
 <p>
 
-300以上のAIツールをカテゴリ別に整理
+人気AIツールを検索・比較できるディレクトリ
 
 </p>
 
 <div class="search">
 
 <input id="searchBox" placeholder="AIツール検索">
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<h2>AIツールカテゴリ</h2>
-
-<div class="grid">
-
-${catHtml}
 
 </div>
 
@@ -440,6 +448,18 @@ ${featured}
 
 <section class="section container">
 
+<h2>AIツールカテゴリ</h2>
+
+<div class="grid">
+
+${catHtml}
+
+</div>
+
+</section>
+
+<section class="section container">
+
 <a href="/ai-tools/">
 
 すべてのAIツールを見る →
@@ -447,26 +467,6 @@ ${featured}
 </a>
 
 </section>
-
-<script>
-
-const input=document.getElementById("searchBox")
-
-input.addEventListener("input",()=>{
-
-const q=input.value.toLowerCase()
-
-document.querySelectorAll(".card").forEach(c=>{
-
-const t=c.innerText.toLowerCase()
-
-c.style.display=t.includes(q)?"block":"none"
-
-})
-
-})
-
-</script>
 
 `
 
