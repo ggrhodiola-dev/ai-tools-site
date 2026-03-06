@@ -1,29 +1,28 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("fs")
+const path = require("path")
 
-const root = path.resolve(__dirname, "..");
-const dataFile = path.join(root, "data", "tools.json");
-const outDir = path.join(root, "site_out");
+const root = path.resolve(__dirname, "..")
+const dataFile = path.join(root, "data", "tools.json")
+const outDir = path.join(root, "site_out")
 
-const tools = JSON.parse(fs.readFileSync(dataFile));
+const tools = JSON.parse(fs.readFileSync(dataFile))
 
 function ensureDir(dir) {
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
 }
 
 function slug(s) {
-    return s
-        .toLowerCase()
+    return s.toLowerCase()
         .replace(/\s+/g, "-")
-        .replace(/[^\w-]/g, "");
+        .replace(/[^\w-]/g, "")
 }
 
 function copyPublic() {
 
-    const src = path.join(root, "public");
-    if (!fs.existsSync(src)) return;
+    const src = path.join(root, "public")
+    if (!fs.existsSync(src)) return
 
-    fs.cpSync(src, outDir, { recursive: true });
+    fs.cpSync(src, outDir, { recursive: true })
 
 }
 
@@ -36,7 +35,6 @@ function layout(title, body) {
 <head>
 
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>${title}</title>
@@ -77,16 +75,29 @@ AI Tools Directory
 </body>
 
 </html>
-`;
+`
 }
 
 function buildTools() {
 
     tools.forEach(t => {
 
-        const dir = path.join(outDir, "tools", t.slug);
+        const dir = path.join(outDir, "tools", t.slug)
+        ensureDir(dir)
 
-        ensureDir(dir);
+        const related = tools
+            .filter(x => x.slug !== t.slug && x.category === t.category)
+            .slice(0, 6)
+
+        const relatedHtml = related.map(r => `
+
+<li>
+<a href="/tools/${r.slug}/">
+${r.name}
+</a>
+</li>
+
+`).join("")
 
         const body = `
 
@@ -98,7 +109,7 @@ function buildTools() {
 
 <p>
 
-<a href="${t.url || "#"}" target="_blank">
+<a href="${t.url}" target="_blank">
 公式サイト
 </a>
 
@@ -106,16 +117,28 @@ function buildTools() {
 
 </section>
 
-`;
+<section class="section container">
 
-        const html = layout(t.name, body);
+<h2>関連AIツール</h2>
+
+<ul>
+
+${relatedHtml}
+
+</ul>
+
+</section>
+
+`
+
+        const html = layout(t.name, body)
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
             html
-        );
+        )
 
-    });
+    })
 
 }
 
@@ -131,15 +154,11 @@ ${t.name}
 
 </a>
 
-<p>
-
-${t.description || ""}
-
-</p>
+<p>${t.description || ""}</p>
 
 </div>
 
-`).join("");
+`).join("")
 
     const body = `
 
@@ -155,60 +174,54 @@ ${items}
 
 </section>
 
-`;
+`
 
-    const html = layout("AIツール一覧", body);
+    const html = layout("AIツール一覧", body)
 
-    const dir = path.join(outDir, "ai-tools");
+    const dir = path.join(outDir, "ai-tools")
 
-    ensureDir(dir);
+    ensureDir(dir)
 
     fs.writeFileSync(
         path.join(dir, "index.html"),
         html
-    );
+    )
 
 }
 
 function buildCategories() {
 
-    const map = {};
+    const map = {}
 
     tools.forEach(t => {
 
-        if (!t.category) return;
+        if (!t.category) return
 
-        if (!map[t.category]) map[t.category] = [];
+        if (!map[t.category]) map[t.category] = []
 
-        map[t.category].push(t);
+        map[t.category].push(t)
 
-    });
+    })
 
     Object.entries(map).forEach(([cat, list]) => {
 
-        const dir = path.join(outDir, "category", slug(cat));
+        const dir = path.join(outDir, "category", slug(cat))
 
-        ensureDir(dir);
+        ensureDir(dir)
 
         const items = list.map(t => `
 
 <div class="card">
 
 <a href="/tools/${t.slug}/">
-
 ${t.name}
-
 </a>
 
-<p>
-
-${t.description || ""}
-
-</p>
+<p>${t.description || ""}</p>
 
 </div>
 
-`).join("");
+`).join("")
 
         const body = `
 
@@ -224,22 +237,22 @@ ${items}
 
 </section>
 
-`;
+`
 
-        const html = layout(cat + " AIツール", body);
+        const html = layout(cat + " AIツール", body)
 
         fs.writeFileSync(
             path.join(dir, "index.html"),
             html
-        );
+        )
 
-    });
+    })
 
 }
 
 function buildCategoryIndex() {
 
-    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))];
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))]
 
     const items = cats.map(c => `
 
@@ -253,7 +266,7 @@ ${c}
 
 </div>
 
-`).join("");
+`).join("")
 
     const body = `
 
@@ -269,18 +282,83 @@ ${items}
 
 </section>
 
-`;
+`
 
-    const html = layout("AIツールカテゴリ", body);
+    const html = layout("AIツールカテゴリ", body)
 
-    const dir = path.join(outDir, "category");
+    const dir = path.join(outDir, "category")
 
-    ensureDir(dir);
+    ensureDir(dir)
 
     fs.writeFileSync(
         path.join(dir, "index.html"),
         html
-    );
+    )
+
+}
+
+function buildTags() {
+
+    const map = {}
+
+    tools.forEach(t => {
+
+        if (!t.tags) return
+
+        t.tags.forEach(tag => {
+
+            if (!map[tag]) map[tag] = []
+
+            map[tag].push(t)
+
+        })
+
+    })
+
+    Object.entries(map).forEach(([tag, list]) => {
+
+        const dir = path.join(outDir, "tag", slug(tag))
+
+        ensureDir(dir)
+
+        const items = list.map(t => `
+
+<div class="card">
+
+<a href="/tools/${t.slug}/">
+${t.name}
+</a>
+
+<p>${t.description}</p>
+
+</div>
+
+`).join("")
+
+        const body = `
+
+<section class="section container">
+
+<h1>${tag} AIツール</h1>
+
+<div class="grid">
+
+${items}
+
+</div>
+
+</section>
+
+`
+
+        const html = layout(tag + " AIツール", body)
+
+        fs.writeFileSync(
+            path.join(dir, "index.html"),
+            html
+        )
+
+    })
 
 }
 
@@ -291,36 +369,16 @@ function buildHome() {
 <div class="card">
 
 <a href="/tools/${t.slug}/">
-
 ${t.name}
-
 </a>
 
-<p>
-
-${t.description || ""}
-
-</p>
+<p>${t.description}</p>
 
 </div>
 
-`).join("");
+`).join("")
 
-    const latest = tools.slice(-8).map(t => `
-
-<div class="card">
-
-<a href="/tools/${t.slug}/">
-
-${t.name}
-
-</a>
-
-</div>
-
-`).join("");
-
-    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))].slice(0, 8);
+    const cats = [...new Set(tools.map(t => t.category).filter(Boolean))].slice(0, 8)
 
     const catHtml = cats.map(c => `
 
@@ -334,7 +392,7 @@ ${c}
 
 </div>
 
-`).join("");
+`).join("")
 
     const body = `
 
@@ -382,18 +440,6 @@ ${featured}
 
 <section class="section container">
 
-<h2>最新AIツール</h2>
-
-<div class="grid">
-
-${latest}
-
-</div>
-
-</section>
-
-<section class="section container">
-
 <a href="/ai-tools/">
 
 すべてのAIツールを見る →
@@ -404,51 +450,53 @@ ${latest}
 
 <script>
 
-const input=document.getElementById("searchBox");
+const input=document.getElementById("searchBox")
 
 input.addEventListener("input",()=>{
 
-const q=input.value.toLowerCase();
+const q=input.value.toLowerCase()
 
 document.querySelectorAll(".card").forEach(c=>{
 
-const t=c.innerText.toLowerCase();
+const t=c.innerText.toLowerCase()
 
-c.style.display=t.includes(q)?"block":"none";
+c.style.display=t.includes(q)?"block":"none"
 
-});
+})
 
-});
+})
 
 </script>
 
-`;
+`
 
-    const html = layout("AIツール比較サイト", body);
+    const html = layout("AIツール比較サイト", body)
 
     fs.writeFileSync(
         path.join(outDir, "index.html"),
         html
-    );
+    )
 
 }
 
 function build() {
 
-    ensureDir(outDir);
+    ensureDir(outDir)
 
-    copyPublic();
+    copyPublic()
 
-    buildTools();
+    buildTools()
 
-    buildList();
+    buildList()
 
-    buildCategoryIndex();
+    buildCategoryIndex()
 
-    buildCategories();
+    buildCategories()
 
-    buildHome();
+    buildTags()
+
+    buildHome()
 
 }
 
-build();
+build()
