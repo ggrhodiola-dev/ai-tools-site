@@ -664,7 +664,11 @@ function buildSearch() {
 
 <h1>AIツール検索</h1>
 
+<form class="search" autocomplete="off">
+
 <input id="searchBox" placeholder="AIツール検索">
+
+</form>
 
 <div id="result" class="grid"></div>
 
