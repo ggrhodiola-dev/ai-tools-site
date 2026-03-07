@@ -711,6 +711,12 @@ result.appendChild(card)
 
 }
 
+const params=new URLSearchParams(location.search)
+const initial=(params.get("q")||"").toLowerCase()
+
+box.value=initial
+search(initial)
+
 box.addEventListener("input",e=>{
 search(e.target.value.toLowerCase())
 })
