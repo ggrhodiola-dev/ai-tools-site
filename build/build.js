@@ -547,10 +547,8 @@ ${icon[c] || "🤖"} ${esc(c)}
 
 </p>
 
-<form action="/search/" method="get" class="search">
-
-<input name="q" placeholder="AIツール検索">
-
+<form action="/search/" method="get" autocomplete="off">
+  <input name="q" placeholder="AIツールを検索…">
 </form>
 
 </section>
@@ -741,7 +739,7 @@ function build() {
     buildSearch()
     buildHome()
     buildSitemap()
-
+    buildSearch();
 }
 
 build()
