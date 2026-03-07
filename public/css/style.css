@@ -63,16 +63,18 @@ nav a {
 /* search */
 
 .search {
-    margin: 20px 0 30px 0;
+    margin: 25px 0 40px 0;
 }
 
 .search input {
     width: 420px;
     max-width: 100%;
+    padding: 12px 14px;
+    font-size: 17px;
 }
 
 #result {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .hero input {
