@@ -7,7 +7,7 @@
     const params = new URLSearchParams(location.search);
     const q = (params.get("q") || "").toLowerCase();
 
-    fetch("../data/tools.json")
+    fetch("data/tools.json")
         .then(r => r.json())
         .then(tools => {
 
