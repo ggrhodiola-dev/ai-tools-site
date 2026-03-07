@@ -71,6 +71,10 @@ nav a {
     max-width: 100%;
 }
 
+#result {
+    margin-top: 30px;
+}
+
 .hero input {
 
     width: 380px;
