@@ -74,6 +74,17 @@ nav a {
     font-size: 17px;
 }
 
+.hero input {
+
+    width: 380px;
+    padding: 14px 16px;
+    font-size: 18px;
+
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+}
+
 /* section */
 
 .section {
